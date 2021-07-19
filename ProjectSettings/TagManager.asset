@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Mom
+  - bed
+  - Quest1
+  - Quest2
+  - Quest2.2
+  - Quest3
+  - Quest4
+  - Quest5
+  - Quest5.2
+  - Quest6
+  - Quest7
+  - Quest7.2
+  - Quest8
+  - Quest8.2
+  - Quest9
+  - Quest9.2
+  - Quest9.3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
