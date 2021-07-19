@@ -14,9 +14,12 @@ public class MarketEnter : MonoBehaviour
     public GameObject _LeftButton;
     public GameObject _Market01;
     public GameObject _Market02;
+    public GameObject _MarketEnter02;
 
 
     bool CheckTrigger = false;
+
+    public AudioSource popupPlaceSFX;
 
     // Update is called once per frame
     void Update()
@@ -38,13 +41,17 @@ public class MarketEnter : MonoBehaviour
     {
         if (collider.CompareTag("Player") && CheckTrigger == false)
         {
+            _MarketEnter02.SetActive(true);
             CheckTrigger = true;
+
+            popupPlaceSFX.Play();
         }
     }
     public void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            _MarketEnter02.SetActive(false);
             CheckTrigger = false;
         }
     }

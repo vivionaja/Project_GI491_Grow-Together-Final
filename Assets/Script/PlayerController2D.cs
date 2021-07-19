@@ -17,6 +17,9 @@ public class PlayerController2D : MonoBehaviour
 
     public static bool InShop = false;
 
+    public AudioSource walkSFX01;
+    public AudioSource walkSFX02;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,5 +80,15 @@ public class PlayerController2D : MonoBehaviour
         }
 
         rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+    }
+
+    public void WalkSFX01()
+    {
+        walkSFX01.Play();
+    }
+
+    public void WalkSFX02()
+    {
+        walkSFX02.Play();
     }
 }

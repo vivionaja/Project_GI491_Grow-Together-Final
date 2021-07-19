@@ -7,6 +7,7 @@ public class Closet : MonoBehaviour
 {
     public GameObject _ClosetCollection;
     bool CheckTrigger = false;
+    public AudioSource _OpenClosetSFX;
 
 
     // Update is called once per frame
@@ -14,6 +15,7 @@ public class Closet : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && CheckTrigger == true)
         {
+            _OpenClosetSFX.Play();
             _ClosetCollection.SetActive(true);
         }
     }

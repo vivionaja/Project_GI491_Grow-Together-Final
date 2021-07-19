@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class QuestGive : MonoBehaviour
 {
     public bool TalkMom;
+    public AudioSource _MomCloth;
+    public AudioSource _MomWashDish;
+    public AudioSource _MomPlant;
+    public AudioSource _MomSweep;
+    public AudioSource _MomMopping;
+    public AudioSource _MomMarket;
 
     public Quest quest1;
     public GameObject popUpWash;
@@ -125,6 +131,7 @@ public class QuestGive : MonoBehaviour
     {
         if (Player.haveQuest == false && Player.HappyValue >= 1)
         {
+            _MomWashDish.Play();
             questWindow.SetActive(false);
             questTitle.text = quest1.title;
             questDes.text = quest1.descrit;
@@ -155,6 +162,7 @@ public class QuestGive : MonoBehaviour
     {
         if (Player.haveQuest == false && Player.HappyValue >= 1)
         {
+            _MomPlant.Play();
             questWindow.SetActive(false);
             questTitle.text = quest2.title;
             questDes.text = quest2.descrit;
@@ -245,6 +253,7 @@ public class QuestGive : MonoBehaviour
     {
         if (Player.haveQuest == false && Player.HappyValue > 0)
         {
+            _MomMarket.Play();
             questWindow.SetActive(false);
             questTitle.text = quest5.title;
             questDes.text = quest5.descrit;
@@ -305,6 +314,7 @@ public class QuestGive : MonoBehaviour
     {
         if (Player.haveQuest == false && Player.HappyValue >= 2)
         {
+            _MomMopping.Play();
             questWindow.SetActive(false);
             questTitle.text = quest7.title;
             questDes.text = quest7.descrit;
@@ -335,6 +345,7 @@ public class QuestGive : MonoBehaviour
     {
         if (Player.haveQuest == false && Player.HappyValue >= 2)
         {
+            _MomCloth.Play();
             questWindow.SetActive(false);
             questTitle.text = quest8.title;
             questDes.text = quest8.descrit;
@@ -364,6 +375,7 @@ public class QuestGive : MonoBehaviour
     {
         if (Player.haveQuest == false && Player.HappyValue >= 2)
         {
+            _MomSweep.Play();
             questWindow.SetActive(false);
             questTitle.text = quest9.title;
             questDes.text = quest9.descrit;
@@ -378,6 +390,7 @@ public class QuestGive : MonoBehaviour
         buttonAccept[8].SetActive(false);
         popUpSweep[0].SetActive(true);
         popUpSweep[1].SetActive(true);
+        popUpSweep[2].SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest9.title;
         quest9.isActive = true;

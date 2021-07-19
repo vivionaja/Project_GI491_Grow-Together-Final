@@ -13,7 +13,6 @@ public class DayDay : MonoBehaviour
     public GameObject player1;
     public Text dayTxt;
     public Player player;
-    public GameObject scenesSleep;
     public GameObject endScenesSleep;
 
     public GameObject timerDisplay;
@@ -29,7 +28,14 @@ public class DayDay : MonoBehaviour
     int randomNumber;
 
     public static bool isRan = false;
-    
+
+    public AudioSource sleepSFX;
+    public AudioSource wakeUpSFX;
+    public AudioSource sleeplateSFX;
+
+
+    public GameObject BGMHome;
+
 
     // Start is called before the first frame update
     void Start()
@@ -148,12 +154,16 @@ public class DayDay : MonoBehaviour
 
     public void lateSleep()
     {
+        sleeplateSFX.Play();
+        BGMHome.SetActive(false);
         sleep = true;
         endScenesSleep.SetActive(true);
     }
 
     public void GoSleep()
     {
+        BGMHome.SetActive(false);
+        sleepSFX.Play();
         sleep = true;
         player.lateSleep = false;
         player.lateLateSleep = false;
@@ -168,6 +178,8 @@ public class DayDay : MonoBehaviour
         NextDay();
         TimerSet();
         sleep = false;
+        wakeUpSFX.Play();
+        BGMHome.SetActive(true);
     }
 
     public void RandomQuest()

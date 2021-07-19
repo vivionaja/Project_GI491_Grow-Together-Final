@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LootSystem : MonoBehaviour
 {
+    public AudioSource getItemSFX;
+    public AudioSource spinSFX;
+
     public GameObject _Roulette01;
     public GameObject _Roulette02;
     public GameObject _SpinItem_Window;
@@ -36,7 +39,7 @@ public class LootSystem : MonoBehaviour
 
     public void Spawnner()
     {
-        
+        spinSFX.Play();
         if (Player.HappyValue <= 1)
         {
             SpinNumber = Random.Range(1.0f, 100.0f);
@@ -384,10 +387,11 @@ public class LootSystem : MonoBehaviour
     {
         if (Check == true)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(5f);
             _Roulette01.SetActive(true);
             _Roulette02.SetActive(false);
             _SpinItem_Window.SetActive(true);
+            getItemSFX.Play();
             Check = false;
         }
     }

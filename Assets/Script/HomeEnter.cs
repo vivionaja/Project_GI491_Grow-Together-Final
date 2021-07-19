@@ -6,8 +6,11 @@ public class HomeEnter : MonoBehaviour
 {
     public GameObject _HappyTownMap;
     public GameObject _HomeExit;
+    public GameObject _Home02;
     //public GameObject _CameraHome;
     bool CheckTrigger = false;
+
+    public AudioSource popupPlaceSFX;
 
 
     // Start is called before the first frame update
@@ -32,13 +35,17 @@ public class HomeEnter : MonoBehaviour
     {
         if (collider.CompareTag("Player") && CheckTrigger == false)
         {
+            _Home02.SetActive(true);
             CheckTrigger = true;
+
+            popupPlaceSFX.Play();
         }
     }
     public void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            _Home02.SetActive(false);
             CheckTrigger = false;
         }
     }

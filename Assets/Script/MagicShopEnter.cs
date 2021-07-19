@@ -11,8 +11,11 @@ public class MagicShopEnter : MonoBehaviour
     public GameObject _CameraMain;
     public GameObject _ExitMagicShop;
     public GameObject _Spin;
+    public GameObject _MagicShop02;
 
     bool CheckTrigger = false;
+
+    public AudioSource popupPlaceSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -40,13 +43,17 @@ public class MagicShopEnter : MonoBehaviour
     {
         if (collider.CompareTag("Player") && CheckTrigger == false)
         {
+            _MagicShop02.SetActive(true);
             CheckTrigger = true;
+
+            popupPlaceSFX.Play();
         }
     }
     public void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            _MagicShop02.SetActive(false);
             CheckTrigger = false;
         }
     }

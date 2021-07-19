@@ -10,8 +10,11 @@ public class BakeryEnter : MonoBehaviour
     public GameObject _CameraFollowPlayer;
     public GameObject _CameraMain;
     public GameObject _ExitBakery;
+    public GameObject _Bakery02;
 
-    bool CheckTrigger = false;  
+    bool CheckTrigger = false;
+
+    public AudioSource popupPlaceSFX;
 
     // Update is called once per frame
     void Update()
@@ -33,13 +36,17 @@ public class BakeryEnter : MonoBehaviour
     {
         if (collider.CompareTag("Player") && CheckTrigger == false)
         {
+            _Bakery02.SetActive(true);
             CheckTrigger = true;
+
+            popupPlaceSFX.Play();
         }
     }
     public void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            _Bakery02.SetActive(false);
             CheckTrigger = false;
         }
     }

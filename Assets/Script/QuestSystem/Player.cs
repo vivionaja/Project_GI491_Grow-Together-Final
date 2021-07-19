@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public AudioSource ShowerSFX;
+    public AudioSource MoppingSFX;
+    public AudioSource BrushTeethSFX;
+    public AudioSource WaterThePlantsSFX;
+    public AudioSource WashDishesSFX;
+    public AudioSource SweepSFX;
+    public AudioSource GetClothSFX;
+    public AudioSource EatSFX;
+
     Animator anim;
     public bool isRub;
     public bool isSweep;
@@ -51,7 +60,7 @@ public class Player : MonoBehaviour
     public int maxQuest = 3;
     public int currentQuest;
 
-    public static int money = 99999;
+    public static int money = 0;
     public string moneytxt;
     public Text txtmoney;
     public Text TextHappy;
@@ -59,7 +68,6 @@ public class Player : MonoBehaviour
     public static int maxHappyValue = 12;
 
     public Quest quest;
-
 
     private void Start()
     {
@@ -92,6 +100,7 @@ public class Player : MonoBehaviour
             if (haveQ1 == true)
             {
                 ItemAnim.isWash = true;
+                WashDishesSFX.Play();
                 isWork = true;
             }
             QuestWash();
@@ -102,6 +111,7 @@ public class Player : MonoBehaviour
             quest.CheckButton = true;
             if (haveQ2 == true)
             {
+                WaterThePlantsSFX.Play();
                 isWater = true;
                 isWork = true;
             }
@@ -111,6 +121,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Checkquest3 == true)
         {
             quest.CheckButton = true;
+            BrushTeethSFX.Play();
             isBrush = true;
             isWork = true;
             QuestBrush();
@@ -122,6 +133,7 @@ public class Player : MonoBehaviour
             if (haveQ4 == true)
             {
                 ItemAnim.isBath = true;
+                ShowerSFX.Play();
                 isWork = true;
             }
             QuestBath();
@@ -133,6 +145,7 @@ public class Player : MonoBehaviour
             quest.CheckButton = true;
             if (haveQ6 == true)
             {
+                EatSFX.Play();
                 ItemAnim.isEat = true;
                 isWork = true;
             }
@@ -142,6 +155,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Checkquest7 == true)
         {
             quest.CheckButton = true;
+            MoppingSFX.Play();
             isRub = true;
             isWork = true;
             QuestRub();
@@ -150,6 +164,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Checkquest8 == true)
         {
             quest.CheckButton = true;
+            GetClothSFX.Play();
             isPick = true;
             isWork = true;
             QuestPick();
@@ -158,6 +173,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Checkquest9 == true)
         {
             quest.CheckButton = true;
+            SweepSFX.Play();
             isSweep = true;
             isWork = true;
             QuestSweep();
