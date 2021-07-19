@@ -36,8 +36,8 @@ public class DayDay : MonoBehaviour
     {
         RandomQuest();
         takingAway = false;
-        timerMin = 2;
-        timerSec = 59;
+        timerMin = 5;
+        timerSec = 00;
         day = 1;
         dayTxt.text = "Day : " + day;
         timerDisplay.GetComponent<Text>().text = "0" + timerMin + ":" + timerSec;
@@ -56,8 +56,8 @@ public class DayDay : MonoBehaviour
     void TimerSet()
     {
         takingAway = false;
-        timerMin = 2;
-        timerSec = 59;
+        timerMin = 5;
+        timerSec = 00;
         dayTxt.text = "Day : " + day;
         timerDisplay.GetComponent<Text>().text = "0" + timerMin + ":" + timerSec;
     }
@@ -149,8 +149,7 @@ public class DayDay : MonoBehaviour
     public void lateSleep()
     {
         sleep = true;
-        scenesSleep.SetActive(true);
-        endScenesSleep.SetActive(false);
+        endScenesSleep.SetActive(true);
     }
 
     public void GoSleep()
@@ -158,18 +157,13 @@ public class DayDay : MonoBehaviour
         sleep = true;
         player.lateSleep = false;
         player.lateLateSleep = false;
-        scenesSleep.SetActive(true);
-        endScenesSleep.SetActive(false);
-    }
-    public void NextScene()
-    {
         endScenesSleep.SetActive(true);
     }
+   
     public void endScene()
     {
         QuestGive.isEndseen = true;
         isRan = false;
-        scenesSleep.SetActive(false);
         endScenesSleep.SetActive(false);
         NextDay();
         TimerSet();
