@@ -143,6 +143,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest1()
     {
+        quest1.goal.currentAmount = 0;
         buttonAccept[0].SetActive(false);
         popUpWash.SetActive(true);
         questWindowtxt.SetActive(true);
@@ -174,6 +175,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest2()
     {
+        quest2.goal.currentAmount = 0;
         buttonAccept[1].SetActive(false);
         popUpWater[0].SetActive(true);
         popUpWater[1].SetActive(true);
@@ -205,6 +207,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest3()
     {
+        quest3.goal.currentAmount = 0;
         buttonAccept[2].SetActive(false);
         popUpBrush.SetActive(true);
         questWindowtxt.SetActive(true);
@@ -234,6 +237,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest4()
     {
+        quest4.goal.currentAmount = 0;
         buttonAccept[3].SetActive(false);
         Player.haveQ4 = true;
         popUpBath.SetActive(true);
@@ -265,6 +269,8 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest5()
     {
+        quest5.goal.currentAmount = 0;
+        Player.haveQ5 = true;
         buttonAccept[4].SetActive(false);
         //popUpBuy[].SetActive(true);
         questWindowtxt.SetActive(true);
@@ -295,6 +301,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest6()
     {
+        quest6.goal.currentAmount = 0;
         buttonAccept[5].SetActive(false);
         Player.haveQ6 = true;
         popUpEat.SetActive(true);
@@ -326,6 +333,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest7()
     {
+        quest7.goal.currentAmount = 0;
         buttonAccept[6].SetActive(false);
         popUpRub[0].SetActive(true);
         popUpRub[1].SetActive(true);
@@ -357,6 +365,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest8()
     {
+        quest8.goal.currentAmount = 0;
         buttonAccept[7].SetActive(false);
         popUpPick[0].SetActive(true);
         questWindowtxt.SetActive(true);
@@ -387,6 +396,7 @@ public class QuestGive : MonoBehaviour
     }
     public void AcceptQuest9()
     {
+        quest9.goal.currentAmount = 0;
         buttonAccept[8].SetActive(false);
         popUpSweep[0].SetActive(true);
         popUpSweep[1].SetActive(true);
@@ -415,14 +425,16 @@ public class QuestGive : MonoBehaviour
                 popUpHelp.SetActive(true);
                 if (quest1.isFinish == true)
                 {
+                    
                     Player.haveQ1 = false;
                     Textbutton[0].SetActive(false);
                     Textbutton[1].SetActive(false);
                     Textbutton[2].SetActive(false);
                     popUpWash.SetActive(false);
                 }
-                if (quest2.isFinish == true)
+                else if (quest2.isFinish == true)
                 {
+                    
                     Player.haveQ2 = false;
                     Textbutton[3].SetActive(false);
                     Textbutton[4].SetActive(false);
@@ -430,24 +442,30 @@ public class QuestGive : MonoBehaviour
                     Textbutton[6].SetActive(false);
                    
                 }
-                if (quest3.isFinish == true)
+                else if (quest3.isFinish == true)
                 {
+                    
                     Textbutton[7].SetActive(false);
                     Textbutton[8].SetActive(false);
                     Textbutton[9].SetActive(false);
                     Textbutton[10].SetActive(false);
                     popUpBrush.SetActive(false);
                 }
-                if (quest4.isFinish == true)
+                else if (quest4.isFinish == true)
                 {
+                    
                     Player.haveQ4 = false;
                     Textbutton[11].SetActive(false);
                     Textbutton[12].SetActive(false);
                     Textbutton[13].SetActive(false);
                     popUpBath.SetActive(false);
                 }
-                if (quest5.isFinish == true)
+                else if (quest5.isFinish == true)
                 {
+                    
+                    Player.haveQ5 = false;
+                    Player.isMushroom = false;
+                    Player.isSalmon = false;
                     Textbutton[14].SetActive(false);
                     Textbutton[15].SetActive(false);
                     Textbutton[16].SetActive(false);
@@ -455,8 +473,9 @@ public class QuestGive : MonoBehaviour
                     Textbutton[18].SetActive(false);
                    
                 }
-                if (quest6.isFinish == true)
+                else if (quest6.isFinish == true)
                 {
+                    
                     Player.haveQ6 = false;
                     Textbutton[19].SetActive(false);
                     Textbutton[20].SetActive(false);
@@ -464,8 +483,9 @@ public class QuestGive : MonoBehaviour
                     Textbutton[22].SetActive(false);
                     popUpEat.SetActive(false);
                 }
-                if (quest7.isFinish == true)
+                else if (quest7.isFinish == true)
                 {
+                    
                     Textbutton[23].SetActive(false);
                     Textbutton[24].SetActive(false);
                     Textbutton[25].SetActive(false);
@@ -474,21 +494,32 @@ public class QuestGive : MonoBehaviour
                     Textbutton[28].SetActive(false);
                     
                 }
-                if (quest8.isFinish == true)
+                else if (quest8.isFinish == true)
                 {
+                    
                     Textbutton[29].SetActive(false);
                     Textbutton[30].SetActive(false);
                     Textbutton[31].SetActive(false);
                     Textbutton[32].SetActive(false);
                     
                 }
-                if (quest9.isFinish == true)
+                else if (quest9.isFinish == true)
                 {
+                    
                     Textbutton[33].SetActive(false);
                     Textbutton[34].SetActive(false);
                     Textbutton[35].SetActive(false);
                     
                 }
+                quest1.isFinish = false;
+                quest2.isFinish = false;
+                quest3.isFinish = false;
+                quest4.isFinish = false;
+                quest5.isFinish = false;
+                quest6.isFinish = false;
+                quest7.isFinish = false;
+                quest8.isFinish = false;
+                quest9.isFinish = false;
             }
         }
     }
@@ -542,4 +573,6 @@ public class QuestGive : MonoBehaviour
     {
         QuestComplete();
     }
+      
+        
 }

@@ -27,11 +27,16 @@ public class Player : MonoBehaviour
     public static bool haveQ2 = false;
     public static bool cheakQ2 = false;
     public static bool haveQ4 =false;
+    public static bool haveQ5 = false;
     public static bool cheakQ5 = false;
     public static bool haveQ6 =false;
     public static bool cheakQ7 = false;
     public static bool cheakQ8 = false;
     public static bool cheakQ9 = false;
+    public static bool isMushroom = false;
+    public static bool thisMushroom = false;
+    public static bool isSalmon = false;
+    public static bool thisSalmon = false;
 
     CheakAray cheak;
     public GameObject popUpWash;   
@@ -347,7 +352,18 @@ public class Player : MonoBehaviour
     {
         if (quest.isActive)
         {
-            quest.goal.Buy();
+            if(isMushroom == false && thisMushroom == true)
+            {
+                quest.goal.Buy();
+                isMushroom = true;
+                Debug.Log("ismush " + isMushroom);
+            }
+            else if(isSalmon == false && thisSalmon == true)
+            {
+                quest.goal.Buy();
+                isSalmon = true;
+            }
+
             if (quest.goal.IsReached())
             {
                 money += quest.money;

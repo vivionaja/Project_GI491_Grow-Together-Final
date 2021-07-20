@@ -24,11 +24,12 @@ public class MarketEnter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && CheckTrigger == true)
+        if (Input.GetKeyDown(KeyCode.Space) && CheckTrigger == true && Player.haveQ5 == true)
         {
             Debug.Log("Push");
             _CameraFollowPlayer.SetActive(false);
             _CameraMain.SetActive(true);
+            _Market01.SetActive(true);
             _HappyTownMap.SetActive(false);
             _Market.SetActive(true);
             _RightButton.SetActive(true);
@@ -78,6 +79,9 @@ public class MarketEnter : MonoBehaviour
         _CameraMain.SetActive(false);
         _Market.SetActive(false);
         _ExitMarket.SetActive(false);
+        _LeftButton.SetActive(false);
+        _RightButton.SetActive(false);
+        _Market02.SetActive(false);
 
         PlayerController2D.InShop = false;
     }
