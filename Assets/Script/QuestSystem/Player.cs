@@ -91,6 +91,13 @@ public class Player : MonoBehaviour
         anim.SetBool("isBrush", isBrush);
         anim.SetBool("isWater", isWater);
     }
+    public static void CheckHappy()
+    {
+        if (HappyValue > maxHappyValue)
+        {
+            HappyValue = 12;
+        }
+    }
 
     public void NextDay()
     {

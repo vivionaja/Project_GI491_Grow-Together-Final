@@ -50,6 +50,20 @@ public class QuestGive : MonoBehaviour
     public GameObject[] Textbutton;
     public static bool isEndseen;
 
+    //Achievements
+    public GameObject popUpAchievements;
+    public GameObject popUpMoppingAchievementsCopper;
+    public GameObject popUpMoppingAchievementsSilver;
+    public GameObject popUpMoppingAchievementsGold;
+    public GameObject popUpMoppingAchievementsCollecCopper;
+    public GameObject popUpMoppingAchievementsCollecSilver;
+    public GameObject popUpMoppingAchievementsCollecGold;
+    bool MoppingAchievementsCompleteCopper;
+    bool MoppingAchievementsCompleteSilver;
+    bool MoppingAchievementsCompleteGold;
+    int CountQuest;
+    int maxCountQuest = 5;
+
     public void Start()
     {
         popUpHelp.SetActive(true);
@@ -148,6 +162,7 @@ public class QuestGive : MonoBehaviour
         popUpWash.SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest1.title;
+        descritText.text = quest1.descrit;
         quest1.isActive = true;
         player.quest = quest1;
         Player.haveQuest = true;
@@ -157,6 +172,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest1.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest2()
@@ -181,6 +197,7 @@ public class QuestGive : MonoBehaviour
         popUpWater[1].SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest2.title;
+        descritText.text = quest2.descrit;
         quest2.isActive = true;
         player.quest = quest2;
         Player.haveQuest = true;
@@ -190,6 +207,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest2.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest3()
@@ -212,6 +230,7 @@ public class QuestGive : MonoBehaviour
         popUpBrush.SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest3.title;
+        descritText.text = quest3.descrit;
         quest3.isActive = true;
         player.quest = quest3;
         Player.haveQuest = true;
@@ -220,6 +239,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest3.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest4()
@@ -243,6 +263,7 @@ public class QuestGive : MonoBehaviour
         popUpBath.SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest4.title;
+        descritText.text = quest4.descrit;
         quest4.isActive = true;
         player.quest = quest4;
         Player.haveQuest = true;
@@ -251,6 +272,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest4.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest5()
@@ -284,6 +306,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest5.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest6()
@@ -307,6 +330,7 @@ public class QuestGive : MonoBehaviour
         popUpEat.SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest6.title;
+        descritText.text = quest6.descrit;
         quest6.isActive = true;
         player.quest = quest6;
         Player.haveQuest = true;
@@ -315,6 +339,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest6.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest7()
@@ -339,6 +364,7 @@ public class QuestGive : MonoBehaviour
         popUpRub[1].SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest7.title;
+        descritText.text = quest7.descrit;
         quest7.isActive = true;
         player.quest = quest7;
         Player.haveQuest = true;
@@ -347,6 +373,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest7.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest8()
@@ -370,6 +397,7 @@ public class QuestGive : MonoBehaviour
         popUpPick[0].SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest8.title;
+        descritText.text = quest8.descrit;
         quest8.isActive = true;
         player.quest = quest8;
         Player.haveQuest = true;
@@ -378,6 +406,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest8.happyValue;
+        Player.CheckHappy();
     }
 
     public void GiveQuest9()
@@ -403,6 +432,7 @@ public class QuestGive : MonoBehaviour
         popUpSweep[2].SetActive(true);
         questWindowtxt.SetActive(true);
         titleText.text = quest9.title;
+        descritText.text = quest9.descrit;
         quest9.isActive = true;
         player.quest = quest9;
         Player.haveQuest = true;
@@ -411,6 +441,7 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         Player.HappyValue += quest9.happyValue;
+        Player.CheckHappy();
     }
 
     public void QuestComplete()
@@ -424,8 +455,7 @@ public class QuestGive : MonoBehaviour
                 Player.haveQuest = false;
                 popUpHelp.SetActive(true);
                 if (quest1.isFinish == true)
-                {
-                    
+                {  
                     Player.haveQ1 = false;
                     Textbutton[0].SetActive(false);
                     Textbutton[1].SetActive(false);
@@ -485,7 +515,6 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest7.isFinish == true)
                 {
-                    
                     Textbutton[23].SetActive(false);
                     Textbutton[24].SetActive(false);
                     Textbutton[25].SetActive(false);
@@ -493,6 +522,43 @@ public class QuestGive : MonoBehaviour
                     Textbutton[27].SetActive(false);
                     Textbutton[28].SetActive(false);
                     
+                    if (CountQuest < maxCountQuest)
+                    {
+                        CountQuest += 1;
+                        if (CountQuest == 1 && MoppingAchievementsCompleteCopper == false)
+                        {
+                            Debug.Log("Copper");
+                            popUpAchievements.SetActive(true);
+                            popUpMoppingAchievementsCopper.SetActive(true);
+                            popUpMoppingAchievementsCollecCopper.SetActive(true);
+                            popUpAchievements.SetActive(true);
+                            MoppingAchievementsCompleteCopper = true;
+                            StartCoroutine(ExitpopUpAchievements());
+                        }
+                        if (CountQuest == 3 && MoppingAchievementsCompleteSilver == false)
+                        {
+                            Debug.Log("Silver");
+                            popUpAchievements.SetActive(true);
+                            popUpMoppingAchievementsSilver.SetActive(true);
+                            popUpMoppingAchievementsCollecCopper.SetActive(false);
+                            popUpMoppingAchievementsCollecSilver.SetActive(true);
+                            popUpAchievements.SetActive(true);
+                            MoppingAchievementsCompleteSilver = true;
+                            StartCoroutine(ExitpopUpAchievements());
+                        }
+                        if (CountQuest == 5 && MoppingAchievementsCompleteGold == false)
+                        {
+                            Debug.Log("Gold");
+                            popUpAchievements.SetActive(true);
+                            popUpMoppingAchievementsGold.SetActive(true);
+                            popUpMoppingAchievementsCollecSilver.SetActive(false);
+                            popUpMoppingAchievementsCollecGold.SetActive(true);
+                            popUpAchievements.SetActive(true);
+                            MoppingAchievementsCompleteGold = true;
+                            StartCoroutine(ExitpopUpAchievements());
+                        }
+                    }
+
                 }
                 else if (quest8.isFinish == true)
                 {
@@ -573,6 +639,14 @@ public class QuestGive : MonoBehaviour
     {
         QuestComplete();
     }
-      
-        
+    IEnumerator ExitpopUpAchievements()
+    {
+        yield return new WaitForSeconds(3.0f);
+        popUpAchievements.SetActive(false);
+        popUpMoppingAchievementsCopper.SetActive(false);
+        popUpMoppingAchievementsSilver.SetActive(false);
+        popUpMoppingAchievementsGold.SetActive(false);
+        popUpAchievements.SetActive(false);
+    }
+
 }

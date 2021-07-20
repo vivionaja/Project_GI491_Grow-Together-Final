@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DayDay : MonoBehaviour
 {
+    public GameObject popUpHelp;
     public Transform spawnpoint;
     public int day = 0;
     int maxHappy;
@@ -108,10 +109,12 @@ public class DayDay : MonoBehaviour
         day += 1;
         dayTxt.text = "Day : " + day;
         player.currentQuest = 0;
+        popUpHelp.SetActive(true);
         player1.transform.position = spawnpoint.transform.position;
         happyTownMap.SetActive(false);
         home.SetActive(true);
         RandomQuest();
+
         
         if (player.lateLateSleep == true && player.lateSleep == true)
         {
