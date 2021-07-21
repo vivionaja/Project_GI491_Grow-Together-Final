@@ -463,7 +463,7 @@ public class Player : MonoBehaviour
     {
         if (Checkquest1 == true)
         {
-            yield return new WaitForSecondsRealtime(3);
+            yield return new WaitForSecondsRealtime(5);
             ItemAnim.isWash = false;
             isWork = false;
         }
@@ -479,11 +479,16 @@ public class Player : MonoBehaviour
             ItemAnim.isEat = false;
             isWork = false;
         }
+        if (Checkquest3)
+        {
+            yield return new WaitForSecondsRealtime(4);
+            isBrush = false;
+            isWork = false;
+        }
         else
         {
             yield return new WaitForSecondsRealtime(2);
             isRub = false;
-            isBrush = false;
             isSweep = false;
             isPick = false;
             isWater = false;

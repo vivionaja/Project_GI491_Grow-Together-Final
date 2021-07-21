@@ -6,7 +6,7 @@ public class HomeExit : MonoBehaviour
 {
     public GameObject _HappyTownMap;
     public GameObject _HomeExit;
-    //public GameObject _CameraHome;
+
     bool CheckTrigger = false;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,6 @@ public class HomeExit : MonoBehaviour
         {
             Debug.Log("ExitHome");
             _HappyTownMap.SetActive(true);
-            //_CameraHome.SetActive(false);
             _HomeExit.SetActive(false);
             CheckTrigger = false;
         }

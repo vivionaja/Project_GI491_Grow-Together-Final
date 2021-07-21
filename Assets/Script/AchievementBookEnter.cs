@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AchievementBookEnter : MonoBehaviour
 {
     public GameObject _AchievementBookCollection;
+    public AudioSource _OpenAchievementBookSFX;
     bool CheckTrigger = false;
 
 
@@ -15,6 +16,7 @@ public class AchievementBookEnter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && CheckTrigger == true)
         {
+            _OpenAchievementBookSFX.Play();
             _AchievementBookCollection.SetActive(true);
         }
     }

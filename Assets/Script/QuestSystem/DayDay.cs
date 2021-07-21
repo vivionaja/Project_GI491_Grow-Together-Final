@@ -36,6 +36,7 @@ public class DayDay : MonoBehaviour
 
 
     public GameObject BGMHome;
+    public GameObject BGMHappyTownMap;
 
 
     // Start is called before the first frame update
@@ -43,7 +44,7 @@ public class DayDay : MonoBehaviour
     {
         RandomQuest();
         takingAway = false;
-        timerMin = 5;
+        timerMin = 3;
         timerSec = 00;
         day = 1;
         dayTxt.text = "Day : " + day;
@@ -63,7 +64,7 @@ public class DayDay : MonoBehaviour
     void TimerSet()
     {
         takingAway = false;
-        timerMin = 5;
+        timerMin = 3;
         timerSec = 00;
         dayTxt.text = "Day : " + day;
         timerDisplay.GetComponent<Text>().text = "0" + timerMin + ":" + timerSec;
@@ -159,6 +160,7 @@ public class DayDay : MonoBehaviour
     {
         sleeplateSFX.Play();
         BGMHome.SetActive(false);
+        BGMHappyTownMap.SetActive(false);
         sleep = true;
         endScenesSleep.SetActive(true);
     }
@@ -183,7 +185,8 @@ public class DayDay : MonoBehaviour
         sleep = false;
         wakeUpSFX.Play();
         BGMHome.SetActive(true);
-    }
+        BGMHappyTownMap.SetActive(true);
+}
 
     public void RandomQuest()
     {
