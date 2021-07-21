@@ -15333,6 +15333,7 @@ MonoBehaviour:
   _MomMopping: {fileID: 798862044}
   _MomMarket: {fileID: 966864579}
   unlockAchieveSFX: {fileID: 279532954}
+  _QuestFin: {fileID: 279532954}
   quest1:
     CheckButton: 0
     isActive: 0
@@ -37907,6 +37908,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7035424590815689207, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
+      propertyPath: m_Text
+      value: Sweep the floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035424590815689207, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -38942,6 +38947,10 @@ PrefabInstance:
     - target: {fileID: 6200221799772633274, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035424590815689207, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
+      propertyPath: m_Text
+      value: Sweep the floor
       objectReference: {fileID: 0}
     - target: {fileID: 7035424590815689207, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
       propertyPath: m_FontData.m_Font
@@ -47046,6 +47055,10 @@ PrefabInstance:
     - target: {fileID: 6200221799772633274, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035424590815689207, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
+      propertyPath: m_Text
+      value: Sweep the floor
       objectReference: {fileID: 0}
     - target: {fileID: 7035424590815689207, guid: f341c00491d55f2489c31579aafd2a17, type: 3}
       propertyPath: m_FontData.m_Font

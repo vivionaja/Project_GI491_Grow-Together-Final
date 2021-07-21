@@ -13,6 +13,7 @@ public class QuestGive : MonoBehaviour
     public AudioSource _MomMopping;
     public AudioSource _MomMarket;
     public AudioSource unlockAchieveSFX;
+    public AudioSource _QuestFin;
 
     public Quest quest1;
     public GameObject popUpWash;
@@ -490,6 +491,7 @@ public class QuestGive : MonoBehaviour
             {
                 questWindowtxt.SetActive(false);
                 descritWindowtxt.SetActive(false);
+                _QuestFin.Play();
                 player.currentQuest += 1;
                 Player.haveQuest = false;
                 popUpHelp.SetActive(true);
