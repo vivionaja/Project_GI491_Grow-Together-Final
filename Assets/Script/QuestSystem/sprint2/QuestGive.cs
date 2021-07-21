@@ -194,6 +194,7 @@ public class QuestGive : MonoBehaviour
         buttonAccept[0].SetActive(false);
         popUpWash.SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest1.title;
         descritText.text = quest1.descrit;
         quest1.isActive = true;
@@ -230,6 +231,7 @@ public class QuestGive : MonoBehaviour
         popUpWater[0].SetActive(true);
         popUpWater[1].SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest2.title;
         descritText.text = quest2.descrit;
         quest2.isActive = true;
@@ -264,6 +266,7 @@ public class QuestGive : MonoBehaviour
         buttonAccept[2].SetActive(false);
         popUpBrush.SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest3.title;
         descritText.text = quest3.descrit;
         quest3.isActive = true;
@@ -298,6 +301,7 @@ public class QuestGive : MonoBehaviour
         Player.haveQ4 = true;
         popUpBath.SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest4.title;
         descritText.text = quest4.descrit;
         quest4.isActive = true;
@@ -333,6 +337,7 @@ public class QuestGive : MonoBehaviour
         buttonAccept[4].SetActive(false);
         //popUpBuy[].SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest5.title;
         descritText.text = quest5.descrit;
         quest5.isActive = true;
@@ -367,6 +372,7 @@ public class QuestGive : MonoBehaviour
         Player.haveQ6 = true;
         popUpEat.SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest6.title;
         descritText.text = quest6.descrit;
         quest6.isActive = true;
@@ -402,6 +408,7 @@ public class QuestGive : MonoBehaviour
         popUpRub[0].SetActive(true);
         popUpRub[1].SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest7.title;
         descritText.text = quest7.descrit;
         quest7.isActive = true;
@@ -435,6 +442,7 @@ public class QuestGive : MonoBehaviour
         buttonAccept[7].SetActive(false);
         popUpPick[0].SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest8.title;
         descritText.text = quest8.descrit;
         quest8.isActive = true;
@@ -470,6 +478,7 @@ public class QuestGive : MonoBehaviour
         popUpSweep[1].SetActive(true);
         popUpSweep[2].SetActive(true);
         questWindowtxt.SetActive(true);
+        descritWindowtxt.SetActive(true);
         titleText.text = quest9.title;
         descritText.text = quest9.descrit;
         quest9.isActive = true;
