@@ -39046,6 +39046,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7928050656064881446}
     m_Modifications:
     - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
+      propertyPath: m_Text
+      value: Pick up dried clothes
+      objectReference: {fileID: 0}
+    - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -39417,6 +39421,10 @@ PrefabInstance:
     - target: {fileID: 7341157303515064374, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
       propertyPath: m_Name
       value: Q6button
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
+      propertyPath: m_Text
+      value: Grab something to eat
       objectReference: {fileID: 0}
     - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
       propertyPath: m_FontData.m_Font
@@ -39899,6 +39907,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6572793774123329874}
     m_Modifications:
+    - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
+      propertyPath: m_Text
+      value: Pick up dried clothes
+      objectReference: {fileID: 0}
     - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -43717,6 +43729,10 @@ PrefabInstance:
       value: Q6button
       objectReference: {fileID: 0}
     - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
+      propertyPath: m_Text
+      value: Grab something to eat
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -43745,6 +43761,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5660164161593148217}
     m_Modifications:
+    - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
+      propertyPath: m_Text
+      value: Shopping at the market
+      objectReference: {fileID: 0}
     - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -44117,6 +44137,10 @@ PrefabInstance:
     - target: {fileID: 7341157303515064374, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
       propertyPath: m_Name
       value: Q6button
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
+      propertyPath: m_Text
+      value: Grab something to eat
       objectReference: {fileID: 0}
     - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
       propertyPath: m_FontData.m_Font
@@ -45240,6 +45264,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 9007269290491858987}
     m_Modifications:
     - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
+      propertyPath: m_Text
+      value: Shopping at the market
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -45832,6 +45860,10 @@ PrefabInstance:
       value: Q6button
       objectReference: {fileID: 0}
     - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
+      propertyPath: m_Text
+      value: Grab something to eat
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137584377826515241, guid: 5429d931dde513e47b87df3bee201b17, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -46299,6 +46331,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6572793774123329874}
     m_Modifications:
     - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
+      propertyPath: m_Text
+      value: Shopping at the market
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -46748,6 +46784,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6575306465027091596}
     m_Modifications:
     - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
+      propertyPath: m_Text
+      value: Shopping at the market
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -47153,6 +47193,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9007269290491858987}
     m_Modifications:
+    - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
+      propertyPath: m_Text
+      value: Pick up dried clothes
+      objectReference: {fileID: 0}
     - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -47606,6 +47650,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 600720122783206239}
     m_Modifications:
     - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
+      propertyPath: m_Text
+      value: Shopping at the market
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288331451751957110, guid: 1ed79a2ce78935143b810bf5ae411fc8, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 4753f03811307814689c62507b8d6458, type: 3}
@@ -47806,6 +47854,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6575306465027091596}
     m_Modifications:
+    - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
+      propertyPath: m_Text
+      value: Pick up dried clothes
+      objectReference: {fileID: 0}
     - target: {fileID: 930925863593141630, guid: c8f47b24e2dc0f54183895f488937adc, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
