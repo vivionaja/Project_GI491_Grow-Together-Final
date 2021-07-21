@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     public int maxQuest = 3;
     public int currentQuest;
 
-    public static int money = 999;
+    public static int money = 0;
     public string moneytxt;
     public Text txtmoney;
     public Text TextHappy;
