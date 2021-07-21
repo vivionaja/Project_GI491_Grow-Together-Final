@@ -39,283 +39,282 @@ public class LootSystem : MonoBehaviour
 
     public void Spawnner()
     {
-        spinSFX.Play();
-        if (Player.HappyValue <= 1)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 70)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-                
-            }
-            else if (SpinNumber > 70 && SpinNumber <= 83)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 83 && SpinNumber <= 91)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 91 && SpinNumber <= 96)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 96 && SpinNumber <= 99)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-              
-            }
-            else if (SpinNumber > 99 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-        if (Player.HappyValue > 1 && Player.HappyValue <= 3)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 65)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-
-            }
-            else if (SpinNumber > 65 && SpinNumber <= 79)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 79 && SpinNumber <= 88)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 88 && SpinNumber <= 94)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 94 && SpinNumber <= 98)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-            }
-            else if (SpinNumber > 98 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-        if (Player.HappyValue > 3 && Player.HappyValue <= 5)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 60)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-
-            }
-            else if (SpinNumber > 60 && SpinNumber <= 75)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 75 && SpinNumber <= 85)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 85 && SpinNumber <= 92)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 92 && SpinNumber <= 98)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-            }
-            else if (SpinNumber > 98 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-        if (Player.HappyValue > 5 && Player.HappyValue <= 7)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 55)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-
-            }
-            else if (SpinNumber > 55 && SpinNumber <= 71)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 71 && SpinNumber <= 82)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 82 && SpinNumber <= 90)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 90 && SpinNumber <= 97)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-            }
-            else if (SpinNumber > 97 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-        if (Player.HappyValue > 7 && Player.HappyValue <= 9)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 50)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-
-            }
-            else if (SpinNumber > 50 && SpinNumber <= 67)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 67 && SpinNumber <= 80)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 80 && SpinNumber <= 90)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 90 && SpinNumber <= 97)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-            }
-            else if (SpinNumber > 97 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-        if (Player.HappyValue > 9 && Player.HappyValue <= 11)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 45)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-
-            }
-            else if (SpinNumber > 45 && SpinNumber <= 63)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 63 && SpinNumber <= 77)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 77 && SpinNumber <= 89)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 89 && SpinNumber <= 96)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-            }
-            else if (SpinNumber > 96 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-        if (Player.HappyValue == 12)
-        {
-            SpinNumber = Random.Range(1.0f, 100.0f);
-            Debug.Log(SpinNumber);
-            if (SpinNumber >= 1 && SpinNumber <= 40)
-            {
-                CheckReceiveItemJoker = true;
-                _Money5Bath.SetActive(true);
-
-            }
-            else if (SpinNumber > 40 && SpinNumber <= 59)
-            {
-                CheckReceiveItemMoney10 = true;
-                _Money10Bath.SetActive(true);
-            }
-            else if (SpinNumber > 59 && SpinNumber <= 75)
-            {
-                CheckReceiveItemFood = true;
-                _Food.SetActive(true);
-            }
-            else if (SpinNumber > 75 && SpinNumber <= 88)
-            {
-                CheckReceiveItemMoney50 = true;
-                _Money50Bath.SetActive(true);
-            }
-            else if (SpinNumber > 88 && SpinNumber <= 95)
-            {
-                CheckReceiveItemClothing = true;
-                _Clothing.SetActive(true);
-                _ClothingInBook.SetActive(true);
-            }
-            else if (SpinNumber > 95 && SpinNumber <= 100)
-            {
-                CheckReceiveItemSpacialClothing = true;
-                _SpacialClothing.SetActive(true);
-                _SpacialClothingInBook.SetActive(true);
-            }
-        }
-
-
         if (Player.money >= SpinPrice)
         {
             Check = true;
+            spinSFX.Play();
             _Roulette01.SetActive(false);
             _Roulette02.SetActive(true);
             Player.money -= SpinPrice;
-            StartCoroutine(OpenSpinWindow());
+            StartCoroutine(DelayOpenSpinWindow());
+
+            if (Player.HappyValue <= 1)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 70)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 70 && SpinNumber <= 83)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 83 && SpinNumber <= 91)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 91 && SpinNumber <= 96)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 96 && SpinNumber <= 99)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+
+                }
+                else if (SpinNumber > 99 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
+            if (Player.HappyValue > 1 && Player.HappyValue <= 3)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 65)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 65 && SpinNumber <= 79)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 79 && SpinNumber <= 88)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 88 && SpinNumber <= 94)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 94 && SpinNumber <= 98)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+                }
+                else if (SpinNumber > 98 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
+            if (Player.HappyValue > 3 && Player.HappyValue <= 5)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 60)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 60 && SpinNumber <= 75)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 75 && SpinNumber <= 85)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 85 && SpinNumber <= 92)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 92 && SpinNumber <= 98)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+                }
+                else if (SpinNumber > 98 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
+            if (Player.HappyValue > 5 && Player.HappyValue <= 7)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 55)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 55 && SpinNumber <= 71)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 71 && SpinNumber <= 82)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 82 && SpinNumber <= 90)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 90 && SpinNumber <= 97)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+                }
+                else if (SpinNumber > 97 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
+            if (Player.HappyValue > 7 && Player.HappyValue <= 9)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 50)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 50 && SpinNumber <= 67)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 67 && SpinNumber <= 80)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 80 && SpinNumber <= 90)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 90 && SpinNumber <= 97)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+                }
+                else if (SpinNumber > 97 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
+            if (Player.HappyValue > 9 && Player.HappyValue <= 11)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 45)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 45 && SpinNumber <= 63)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 63 && SpinNumber <= 77)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 77 && SpinNumber <= 89)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 89 && SpinNumber <= 96)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+                }
+                else if (SpinNumber > 96 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
+            if (Player.HappyValue == 12)
+            {
+                SpinNumber = Random.Range(1.0f, 100.0f);
+                Debug.Log(SpinNumber);
+                if (SpinNumber >= 1 && SpinNumber <= 40)
+                {
+                    CheckReceiveItemJoker = true;
+                    _Money5Bath.SetActive(true);
+
+                }
+                else if (SpinNumber > 40 && SpinNumber <= 59)
+                {
+                    CheckReceiveItemMoney10 = true;
+                    _Money10Bath.SetActive(true);
+                }
+                else if (SpinNumber > 59 && SpinNumber <= 75)
+                {
+                    CheckReceiveItemFood = true;
+                    _Food.SetActive(true);
+                }
+                else if (SpinNumber > 75 && SpinNumber <= 88)
+                {
+                    CheckReceiveItemMoney50 = true;
+                    _Money50Bath.SetActive(true);
+                }
+                else if (SpinNumber > 88 && SpinNumber <= 95)
+                {
+                    CheckReceiveItemClothing = true;
+                    _Clothing.SetActive(true);
+                    _ClothingInBook.SetActive(true);
+                }
+                else if (SpinNumber > 95 && SpinNumber <= 100)
+                {
+                    CheckReceiveItemSpacialClothing = true;
+                    _SpacialClothing.SetActive(true);
+                    _SpacialClothingInBook.SetActive(true);
+                }
+            }
         }
         
     }
@@ -383,7 +382,7 @@ public class LootSystem : MonoBehaviour
         }
     }
 
-    IEnumerator OpenSpinWindow()
+    IEnumerator DelayOpenSpinWindow()
     {
         if (Check == true)
         {

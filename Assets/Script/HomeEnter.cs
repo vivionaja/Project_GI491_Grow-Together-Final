@@ -26,7 +26,6 @@ public class HomeEnter : MonoBehaviour
         {
             Debug.Log("InHome");
             _HappyTownMap.SetActive(false);
-            //_CameraHome.SetActive(true);
             _HomeExit.SetActive(true);
             CheckTrigger = false;  
         }

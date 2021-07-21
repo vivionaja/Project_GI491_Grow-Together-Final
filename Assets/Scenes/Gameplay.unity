@@ -420,6 +420,7 @@ Transform:
   m_Children:
   - {fileID: 1163827089}
   - {fileID: 47301902}
+  - {fileID: 1800225895}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -517,6 +518,17 @@ MonoBehaviour:
   day: 0
   happyTownMap: {fileID: 1044290833}
   home: {fileID: 1148821702}
+  MagicShop: {fileID: 923054396}
+  SpinWindowItem: {fileID: 1368847760}
+  _Money5Bath: {fileID: 452156353}
+  _Money10Bath: {fileID: 167200079}
+  _Food: {fileID: 1087884270}
+  _Money50Bath: {fileID: 2111153853}
+  _Clothing: {fileID: 452172000}
+  _SpacialClothing: {fileID: 1314568557}
+  SpinButton: {fileID: 530698964}
+  Market: {fileID: 295437854}
+  Bakery: {fileID: 218238039}
   player1: {fileID: 6970045673910925721}
   dayTxt: {fileID: 926578551}
   player: {fileID: 6970045673910925726}
@@ -538,8 +550,8 @@ MonoBehaviour:
   sleepSFX: {fileID: 189634818}
   wakeUpSFX: {fileID: 1800225896}
   sleeplateSFX: {fileID: 245317467}
+  _CameraFollowPlayer: {fileID: 1997816072}
   BGMHome: {fileID: 1519251183}
-  BGMHappyTownMap: {fileID: 1501995784}
 --- !u!61 &18497459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20640,7 +20652,6 @@ Transform:
   - {fileID: 236953671}
   - {fileID: 1519251184}
   - {fileID: 389733282}
-  - {fileID: 1800225895}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31959,15 +31970,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800225894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7875, y: 0.7875, z: 0.7875}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1.5084388, y: 1.5084388, z: 1.5084388}
   m_Children: []
-  m_Father: {fileID: 1148821703}
-  m_RootOrder: 12
+  m_Father: {fileID: 18497455}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 399.99997, y: 225.14285}
+  m_AnchoredPosition: {x: 888.6831, y: 309.22952}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1800225896

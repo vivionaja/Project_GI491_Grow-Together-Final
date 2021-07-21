@@ -16,6 +16,7 @@ public class PlayerController2D : MonoBehaviour
     float acceleration = 300;
 
     public static bool InShop = false;
+    public static bool InEndScene = false;
 
     public AudioSource walkSFX01;
     public AudioSource walkSFX02;
@@ -33,7 +34,7 @@ public class PlayerController2D : MonoBehaviour
     void FixedUpdate()
     {
         
-        if (InShop == false && Player.isWork == false)
+        if (InShop == false && Player.isWork == false && InEndScene == false)
         {
             direction.x = Input.GetAxisRaw("Horizontal");
             direction.y = Input.GetAxisRaw("Vertical");
@@ -66,11 +67,7 @@ public class PlayerController2D : MonoBehaviour
             }
             
         }
-        else
-        {
-
-        }
-        if(InShop == true)
+        if(InShop == true || InEndScene == true)
         {
             spritePlayer.sortingOrder = -1;
         }

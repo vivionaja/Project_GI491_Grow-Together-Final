@@ -11,6 +11,18 @@ public class DayDay : MonoBehaviour
     int maxHappy;
     public GameObject happyTownMap;
     public GameObject home;
+    public GameObject MagicShop;
+    public GameObject SpinWindowItem;
+    public GameObject _Money5Bath;
+    public GameObject _Money10Bath;
+    public GameObject _Food;
+    public GameObject _Money50Bath;
+    public GameObject _Clothing;
+    public GameObject _SpacialClothing;
+    public GameObject SpinButton;
+    public GameObject Market;
+    public GameObject Bakery;
+
     public GameObject player1;
     public Text dayTxt;
     public Player player;
@@ -34,9 +46,8 @@ public class DayDay : MonoBehaviour
     public AudioSource wakeUpSFX;
     public AudioSource sleeplateSFX;
 
-
+    public GameObject _CameraFollowPlayer;
     public GameObject BGMHome;
-    public GameObject BGMHappyTownMap;
 
 
     // Start is called before the first frame update
@@ -160,9 +171,23 @@ public class DayDay : MonoBehaviour
     {
         sleeplateSFX.Play();
         BGMHome.SetActive(false);
-        BGMHappyTownMap.SetActive(false);
+        happyTownMap.SetActive(false);
+        MagicShop.SetActive(false);
+        SpinWindowItem.SetActive(false);
+        _Money5Bath.SetActive(false);
+        _Money10Bath.SetActive(false);
+        _Money50Bath.SetActive(false);
+        _SpacialClothing.SetActive(false);
+        _Food.SetActive(false);
+        _Clothing.SetActive(false);
+        SpinButton.SetActive(false);
+        Bakery.SetActive(false);
+        Market.SetActive(false);
         sleep = true;
         endScenesSleep.SetActive(true);
+        _CameraFollowPlayer.SetActive(true);
+        PlayerController2D.InEndScene = true;
+        
     }
 
     public void GoSleep()
@@ -173,6 +198,7 @@ public class DayDay : MonoBehaviour
         player.lateSleep = false;
         player.lateLateSleep = false;
         endScenesSleep.SetActive(true);
+        PlayerController2D.InEndScene = true;
     }
    
     public void endScene()
@@ -183,10 +209,12 @@ public class DayDay : MonoBehaviour
         NextDay();
         TimerSet();
         sleep = false;
+        sleepSFX.Stop();
+        sleeplateSFX.Stop();
         wakeUpSFX.Play();
         BGMHome.SetActive(true);
-        BGMHappyTownMap.SetActive(true);
-}
+        PlayerController2D.InEndScene = false;
+    }
 
     public void RandomQuest()
     {
