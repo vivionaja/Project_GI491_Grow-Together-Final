@@ -186,7 +186,7 @@ public class DayDay : MonoBehaviour
         sleep = true;
         endScenesSleep.SetActive(true);
         _CameraFollowPlayer.SetActive(true);
-        PlayerController2D.InEndScene = true;
+        PlayerController2D.InShop = true;
         
     }
 
@@ -198,7 +198,7 @@ public class DayDay : MonoBehaviour
         player.lateSleep = false;
         player.lateLateSleep = false;
         endScenesSleep.SetActive(true);
-        PlayerController2D.InEndScene = true;
+        PlayerController2D.InShop = true;
     }
    
     public void endScene()
@@ -213,7 +213,7 @@ public class DayDay : MonoBehaviour
         sleeplateSFX.Stop();
         wakeUpSFX.Play();
         BGMHome.SetActive(true);
-        PlayerController2D.InEndScene = false;
+        PlayerController2D.InShop = false;
     }
 
     public void RandomQuest()
