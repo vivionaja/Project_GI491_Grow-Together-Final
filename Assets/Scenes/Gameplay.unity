@@ -12241,7 +12241,6 @@ MonoBehaviour:
   _ClothingInBook: {fileID: 5561172851511458699}
   _SpacialClothing: {fileID: 1314568557}
   _SpacialClothingInBook: {fileID: 5561172849463786378}
-  SpinPrice: 20
   Clothing: 0
   maxClothing: 2
   SpacialClothing: 0

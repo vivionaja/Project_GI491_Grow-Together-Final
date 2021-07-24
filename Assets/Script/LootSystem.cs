@@ -22,7 +22,7 @@ public class LootSystem : MonoBehaviour
 
     float SpinNumber;
 
-    public int SpinPrice;
+    public static int SpinPrice;
     public int Clothing;
     public int maxClothing = 2;
     public int SpacialClothing;
@@ -36,6 +36,11 @@ public class LootSystem : MonoBehaviour
     bool CheckReceiveItemJoker = false;
     bool CheckReceiveItemClothing = false;
     bool CheckReceiveItemSpacialClothing = false;
+
+    private void Start()
+    {
+        SpinPrice = 20;
+    }
 
     public void Spawnner()
     {
