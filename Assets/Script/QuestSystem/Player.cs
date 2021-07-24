@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject _Unhappy;
+
     public AudioSource ShowerSFX;
     public AudioSource MoppingSFX;
     public AudioSource BrushTeethSFX;
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
     public int maxQuest = 3;
     public int currentQuest;
 
-    public static int money = 0;
+    public static int money = 999;
     public string moneytxt;
     public Text txtmoney;
     public Text TextHappy;
@@ -90,6 +92,14 @@ public class Player : MonoBehaviour
         anim.SetBool("isPick", isPick);
         anim.SetBool("isBrush", isBrush);
         anim.SetBool("isWater", isWater);
+        if(HappyValue == 0)
+        {
+            _Unhappy.SetActive(true);
+        }
+        else
+        {
+            _Unhappy.SetActive(false);
+        }
     }
     public static void CheckHappy()
     {

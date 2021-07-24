@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class QuestGive : MonoBehaviour
 {
+    public GameObject _Happyyim;
+    public GameObject _unHappyyim;
+
     public bool TalkMom;
     public AudioSource _MomCloth;
     public AudioSource _MomWashDish;
@@ -14,6 +17,16 @@ public class QuestGive : MonoBehaviour
     public AudioSource _MomMarket;
     public AudioSource unlockAchieveSFX;
     public AudioSource _QuestFin;
+
+    public GameObject _FinPopUpWash;
+    public GameObject _FinPopUpWater;
+    public GameObject _FinPopUpBrush;
+    public GameObject _FinPopUpBath;
+    public GameObject _FinPopUpBuy;
+    public GameObject _FinPopUpEat;
+    public GameObject _FinPopUpRub;
+    public GameObject _FinPopUpPick;
+    public GameObject _FinPopUpSweep;
 
     public Quest quest1;
     public GameObject popUpWash;
@@ -45,6 +58,7 @@ public class QuestGive : MonoBehaviour
     public Text titleText;
     public Text descritText;
     public Text minusHappyValue;
+    public Text minusUnHappyValue;
     public GameObject[] buttonAccept;
     public GameObject infoQuest;
     public Text questTitle;
@@ -162,6 +176,8 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         logWindow.SetActive(false);
         infoQuest.SetActive(false);
+        _unHappyyim.SetActive(false);
+        _Happyyim.SetActive(false);
         buttonAccept[0].SetActive(false);
         buttonAccept[1].SetActive(false);
         buttonAccept[2].SetActive(false);
@@ -185,6 +201,7 @@ public class QuestGive : MonoBehaviour
             questMoney.text = "" + quest1.money;
             buttonAccept[0].SetActive(true);
             infoQuest.SetActive(true);
+            _Happyyim.SetActive(true);
         }
     }
 
@@ -205,6 +222,7 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _Happyyim.SetActive(false);
         Player.HappyValue += quest1.happyValue;
         Player.CheckHappy();
     }
@@ -217,10 +235,12 @@ public class QuestGive : MonoBehaviour
             questWindow.SetActive(false);
             questTitle.text = quest2.title;
             questDes.text = quest2.descrit;
-            minusHappyValue.text = "" + quest2.happyValue;
+            minusUnHappyValue.text = "" + quest2.happyValue;
             questMoney.text = "" + quest2.money;
             buttonAccept[1].SetActive(true);
             infoQuest.SetActive(true);
+            _unHappyyim.SetActive(true);
+
         }
     }
 
@@ -242,6 +262,7 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _unHappyyim.SetActive(false);
         Player.HappyValue += quest2.happyValue;
         Player.CheckHappy();
     }
@@ -257,11 +278,13 @@ public class QuestGive : MonoBehaviour
             questMoney.text = "" + quest3.money;
             buttonAccept[2].SetActive(true);
             infoQuest.SetActive(true);
+            _Happyyim.SetActive(true);
         }
     }
 
     public void AcceptQuest3()
     {
+        _QuestFin.Play();
         quest3.goal.currentAmount = 0;
         buttonAccept[2].SetActive(false);
         popUpBrush.SetActive(true);
@@ -276,8 +299,11 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _Happyyim.SetActive(false);
+        _FinPopUpBrush.SetActive(true);
         Player.HappyValue += quest3.happyValue;
         Player.CheckHappy();
+        StartCoroutine(ExitpopUpQuest());
     }
 
     public void GiveQuest4()
@@ -291,11 +317,13 @@ public class QuestGive : MonoBehaviour
             questMoney.text = "" + quest4.money;
             buttonAccept[3].SetActive(true);
             infoQuest.SetActive(true);
+            _Happyyim.SetActive(true);
         }
     }
 
     public void AcceptQuest4()
     {
+        _QuestFin.Play();
         quest4.goal.currentAmount = 0;
         buttonAccept[3].SetActive(false);
         Player.haveQ4 = true;
@@ -311,8 +339,11 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _Happyyim.SetActive(false);
+        _FinPopUpBath.SetActive(true);
         Player.HappyValue += quest4.happyValue;
         Player.CheckHappy();
+        StartCoroutine(ExitpopUpQuest());
     }
 
     public void GiveQuest5()
@@ -323,10 +354,11 @@ public class QuestGive : MonoBehaviour
             questWindow.SetActive(false);
             questTitle.text = quest5.title;
             questDes.text = quest5.descrit;
-            minusHappyValue.text = "" + quest5.happyValue;
+            minusUnHappyValue.text = "" + quest5.happyValue;
             questMoney.text = "" + quest5.money;
             buttonAccept[4].SetActive(true);
             infoQuest.SetActive(true);
+            _unHappyyim.SetActive(true);
         }
     }
 
@@ -347,6 +379,7 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _unHappyyim.SetActive(false);
         Player.HappyValue += quest5.happyValue;
         Player.CheckHappy();
     }
@@ -362,11 +395,13 @@ public class QuestGive : MonoBehaviour
             questMoney.text = "" + quest6.money;
             buttonAccept[5].SetActive(true);
             infoQuest.SetActive(true);
+            _Happyyim.SetActive(true);
         }
     }
 
     public void AcceptQuest6()
     {
+        _QuestFin.Play();
         quest6.goal.currentAmount = 0;
         buttonAccept[5].SetActive(false);
         Player.haveQ6 = true;
@@ -382,8 +417,11 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _Happyyim.SetActive(false);
+        _FinPopUpEat.SetActive(true);
         Player.HappyValue += quest6.happyValue;
         Player.CheckHappy();
+        StartCoroutine(ExitpopUpQuest());
     }
 
     public void GiveQuest7()
@@ -394,10 +432,11 @@ public class QuestGive : MonoBehaviour
             questWindow.SetActive(false);
             questTitle.text = quest7.title;
             questDes.text = quest7.descrit;
-            minusHappyValue.text = "" + quest7.happyValue;
+            minusUnHappyValue.text = "" + quest7.happyValue;
             questMoney.text = ""+ quest7.money;
             buttonAccept[6].SetActive(true);
             infoQuest.SetActive(true);
+            _unHappyyim.SetActive(true);
         }
     }
 
@@ -418,6 +457,7 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _unHappyyim.SetActive(false);
         Player.HappyValue += quest7.happyValue;
         Player.CheckHappy();
     }
@@ -430,10 +470,11 @@ public class QuestGive : MonoBehaviour
             questWindow.SetActive(false);
             questTitle.text = quest8.title;
             questDes.text = quest8.descrit;
-            minusHappyValue.text = "" + quest8.happyValue;
+            minusUnHappyValue.text = "" + quest8.happyValue;
             questMoney.text = "" + quest8.money;
             buttonAccept[7].SetActive(true);
             infoQuest.SetActive(true);
+            _unHappyyim.SetActive(true);
         }
     }
     public void AcceptQuest8()
@@ -452,6 +493,7 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _unHappyyim.SetActive(false);
         Player.HappyValue += quest8.happyValue;
         Player.CheckHappy();
     }
@@ -464,10 +506,11 @@ public class QuestGive : MonoBehaviour
             questWindow.SetActive(false);
             questTitle.text = quest9.title;
             questDes.text = quest9.descrit;
-            minusHappyValue.text = "" + quest9.happyValue;
+            minusUnHappyValue.text = "" + quest9.happyValue;
             questMoney.text = "" + quest9.money;
             buttonAccept[8].SetActive(true);
             infoQuest.SetActive(true);
+            _unHappyyim.SetActive(true);
         }
     }
     public void AcceptQuest9()
@@ -488,6 +531,7 @@ public class QuestGive : MonoBehaviour
         questWindow.SetActive(false);
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
+        _unHappyyim.SetActive(false);
         Player.HappyValue += quest9.happyValue;
         Player.CheckHappy();
     }
@@ -500,25 +544,30 @@ public class QuestGive : MonoBehaviour
             {
                 questWindowtxt.SetActive(false);
                 descritWindowtxt.SetActive(false);
-                _QuestFin.Play();
                 player.currentQuest += 1;
                 Player.haveQuest = false;
                 popUpHelp.SetActive(true);
                 if (quest1.isFinish == true)
-                {  
+                {
+                    _QuestFin.Play();
                     Player.haveQ1 = false;
                     Textbutton[0].SetActive(false);
                     Textbutton[1].SetActive(false);
                     Textbutton[2].SetActive(false);
                     popUpWash.SetActive(false);
+                    _FinPopUpWash.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
                 }
                 else if (quest2.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Player.haveQ2 = false;
                     Textbutton[3].SetActive(false);
                     Textbutton[4].SetActive(false);
                     Textbutton[5].SetActive(false);
                     Textbutton[6].SetActive(false);
+                    _FinPopUpWater.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
 
                     if (CountQuest < maxCountQuest)
                     {
@@ -562,6 +611,7 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest3.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Textbutton[7].SetActive(false);
                     Textbutton[8].SetActive(false);
                     Textbutton[9].SetActive(false);
@@ -570,6 +620,7 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest4.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Player.haveQ4 = false;
                     Textbutton[11].SetActive(false);
                     Textbutton[12].SetActive(false);
@@ -578,6 +629,7 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest5.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Player.haveQ5 = false;
                     Player.isMushroom = false;
                     Player.isSalmon = false;
@@ -586,6 +638,8 @@ public class QuestGive : MonoBehaviour
                     Textbutton[16].SetActive(false);
                     Textbutton[17].SetActive(false);
                     Textbutton[18].SetActive(false);
+                    _FinPopUpBuy.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
 
                     if (CountQuest < maxCountQuest)
                     {
@@ -629,6 +683,7 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest6.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Player.haveQ6 = false;
                     Textbutton[19].SetActive(false);
                     Textbutton[20].SetActive(false);
@@ -638,13 +693,16 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest7.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Textbutton[23].SetActive(false);
                     Textbutton[24].SetActive(false);
                     Textbutton[25].SetActive(false);
                     Textbutton[26].SetActive(false);
                     Textbutton[27].SetActive(false);
                     Textbutton[28].SetActive(false);
-                    
+                    _FinPopUpRub.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
+
                     if (CountQuest < maxCountQuest)
                     {
                         CountQuest += 1;
@@ -687,10 +745,13 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest8.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Textbutton[29].SetActive(false);
                     Textbutton[30].SetActive(false);
                     Textbutton[31].SetActive(false);
                     Textbutton[32].SetActive(false);
+                    _FinPopUpPick.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
 
                     if (CountQuest < maxCountQuest)
                     {
@@ -734,9 +795,12 @@ public class QuestGive : MonoBehaviour
                 }
                 else if (quest9.isFinish == true)
                 {
+                    _QuestFin.Play();
                     Textbutton[33].SetActive(false);
                     Textbutton[34].SetActive(false);
                     Textbutton[35].SetActive(false);
+                    _FinPopUpSweep.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
                 }
                 quest1.isFinish = false;
                 quest2.isFinish = false;
@@ -806,6 +870,19 @@ public class QuestGive : MonoBehaviour
         popUpMoppingAchievementsCopper.SetActive(false);
         popUpMoppingAchievementsSilver.SetActive(false);
         popUpMoppingAchievementsGold.SetActive(false);
-        popUpAchievements.SetActive(false);
+    }
+
+    IEnumerator ExitpopUpQuest()
+    {
+        yield return new WaitForSeconds(3.0f);
+        _FinPopUpBath.SetActive(false);
+        _FinPopUpBrush.SetActive(false);
+        _FinPopUpBuy.SetActive(false);
+        _FinPopUpEat.SetActive(false);
+        _FinPopUpPick.SetActive(false);
+        _FinPopUpRub.SetActive(false);
+        _FinPopUpSweep.SetActive(false);
+        _FinPopUpWash.SetActive(false);
+        _FinPopUpWater.SetActive(false);
     }
 }
