@@ -301,7 +301,14 @@ public class Player : MonoBehaviour
             quest.goal.DishWash();           
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
             }
         }
@@ -321,7 +328,14 @@ public class Player : MonoBehaviour
             }
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -335,7 +349,14 @@ public class Player : MonoBehaviour
             quest.goal.Brush();
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -348,7 +369,14 @@ public class Player : MonoBehaviour
             quest.goal.Bath();
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -373,7 +401,14 @@ public class Player : MonoBehaviour
 
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -386,7 +421,14 @@ public class Player : MonoBehaviour
             quest.goal.Eat();
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -407,7 +449,14 @@ public class Player : MonoBehaviour
             }
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -428,7 +477,14 @@ public class Player : MonoBehaviour
             if (quest.goal.IsReached())
             {
                 popUpPick[1].SetActive(false);
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }
@@ -453,7 +509,14 @@ public class Player : MonoBehaviour
             }
             if (quest.goal.IsReached())
             {
-                money += quest.money;
+                if (DayDay.day % 5 == 0)
+                {
+                    money += (quest.money * 2);
+                }
+                else
+                {
+                    money += quest.money;
+                }
                 quest.Complete();
                 txtmoney.text = "Money " + money;
             }

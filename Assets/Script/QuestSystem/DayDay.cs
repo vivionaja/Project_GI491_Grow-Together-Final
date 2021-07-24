@@ -7,7 +7,7 @@ public class DayDay : MonoBehaviour
 {
     public GameObject popUpHelp;
     public Transform spawnpoint;
-    public int day = 0;
+    public static int day = 0;
     int maxHappy;
     public GameObject happyTownMap;
     public GameObject home;
