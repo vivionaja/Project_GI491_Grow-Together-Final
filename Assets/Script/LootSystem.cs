@@ -22,7 +22,7 @@ public class LootSystem : MonoBehaviour
 
     float SpinNumber;
 
-    public int SpinPrice;
+    public static int SpinPrice;
     public int Clothing;
     public int maxClothing = 2;
     public int SpacialClothing;

@@ -119,6 +119,14 @@ public class DayDay : MonoBehaviour
     public void NextDay()
     {
         day += 1;
+        if (day % 5 == 0)
+        {
+            LootSystem.SpinPrice = 15;
+        }
+        else if (day % 7 == 0)
+        {
+            LootSystem.SpinPrice = 10;
+        }
         dayTxt.text = "Day : " + day;
         player.currentQuest = 0;
         popUpHelp.SetActive(true);
