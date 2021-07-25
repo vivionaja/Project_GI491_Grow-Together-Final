@@ -23,6 +23,10 @@ public class DayDay : MonoBehaviour
     public GameObject Market;
     public GameObject Bakery;
 
+    public GameObject _GoToBedLate;
+    public GameObject _GoToBedLate02;
+    public GameObject _SleepOnTime;
+
     public GameObject player1;
     public Text dayTxt;
     public Player player;
@@ -96,8 +100,9 @@ public class DayDay : MonoBehaviour
             if (player.lateSleep == true)
             {
                 player.lateLateSleep = true;
+                _GoToBedLate02.SetActive(true);
             }
-            player.lateSleep = true;
+            player.lateSleep = true; 
             lateSleep();
         }
 
@@ -142,10 +147,12 @@ public class DayDay : MonoBehaviour
         }
         else if (player.lateSleep == true)
         {
+           
             Player.HappyValue = 4;
         }
         else
         {
+            
             Player.HappyValue = 6;
         }
 
@@ -194,6 +201,12 @@ public class DayDay : MonoBehaviour
         sleep = true;
         endScenesSleep.SetActive(true);
         _CameraFollowPlayer.SetActive(true);
+        _GoToBedLate.SetActive(true);
+        if (player.lateLateSleep == true)
+        {
+            _GoToBedLate.SetActive(false);
+        }
+
         PlayerController2D.InShop = true;
         
     }
@@ -206,6 +219,7 @@ public class DayDay : MonoBehaviour
         player.lateSleep = false;
         player.lateLateSleep = false;
         endScenesSleep.SetActive(true);
+        _SleepOnTime.SetActive(true);
         PlayerController2D.InShop = true;
     }
    
@@ -221,6 +235,9 @@ public class DayDay : MonoBehaviour
         sleeplateSFX.Stop();
         wakeUpSFX.Play();
         BGMHome.SetActive(true);
+        _GoToBedLate.SetActive(false);
+        _GoToBedLate02.SetActive(false);
+        _SleepOnTime.SetActive(false);
         PlayerController2D.InShop = false;
     }
 

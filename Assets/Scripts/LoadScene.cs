@@ -7,6 +7,8 @@ public class LoadScene : MonoBehaviour
     public GameObject _Menu;
     public GameObject _StartButton;
     public GameObject _ExitButton;
+    public GameObject _HowToPlay;
+    public GameObject _HowToPlay02;
 
     public GameObject _Tutorial01;
     public GameObject _Tutorial02;
@@ -42,9 +44,51 @@ public class LoadScene : MonoBehaviour
         _Menu.SetActive(false);
         _StartButton.SetActive(false);
         _ExitButton.SetActive(false);
+        _Player.SetActive(true);
+        _Home.SetActive(true);
+        _MoneyBar.SetActive(true);
+        _TimeBar.SetActive(true);
+        _Day.SetActive(true);
+        _HappyBar.SetActive(true);
+        _QuestsButton.SetActive(true);
+        _HowToPlay.SetActive(true);
+        _CameraFollowPlayer.SetActive(true);
+        _Bed.SetActive(true);
+        _BGM.SetActive(false);
+
+    }
+    public void HowToPlay()
+    {
+        _HowToPlay.SetActive(false);
+        _HowToPlay02.SetActive(true);
         _Tutorial01.SetActive(true);
         _RightButton01.SetActive(true);
+        _CameraFollowPlayer.SetActive(false);
+        
     }
+
+    public void HowToPlay02()
+    {
+        _Tutorial01.SetActive(false);
+        _Tutorial02.SetActive(false);
+        _Tutorial03.SetActive(false);
+        _Tutorial04.SetActive(false);
+        _Tutorial05.SetActive(false);
+        _RightButton01.SetActive(false);
+        _RightButton02.SetActive(false);
+        _RightButton03.SetActive(false);
+        _RightButton04.SetActive(false);
+        _LeftButton02.SetActive(false);
+        _LeftButton03.SetActive(false);
+        _LeftButton04.SetActive(false);
+        _LeftButton05.SetActive(false);
+        _LetsGoButton.SetActive(false);
+        _CameraFollowPlayer.SetActive(true);
+        _HowToPlay.SetActive(true);
+        _HowToPlay02.SetActive(false);
+        
+    }
+
     public void LeftButtonTutorial02()
     {
         _Tutorial02.SetActive(false);
@@ -52,7 +96,8 @@ public class LoadScene : MonoBehaviour
         _RightButton02.SetActive(false);
         _Tutorial01.SetActive(true);
         _RightButton01.SetActive(true);
-        
+      
+
     }
     public void LeftButtonTutorial03()
     {
@@ -62,6 +107,7 @@ public class LoadScene : MonoBehaviour
         _Tutorial02.SetActive(true);
         _LeftButton02.SetActive(true);
         _RightButton02.SetActive(true);
+        
     }
     public void LeftButtonTutorial04()
     {
@@ -71,6 +117,7 @@ public class LoadScene : MonoBehaviour
         _Tutorial03.SetActive(true);
         _LeftButton03.SetActive(true);
         _RightButton03.SetActive(true);
+       
     }
     public void LeftButtonTutorial05()
     {
@@ -80,6 +127,7 @@ public class LoadScene : MonoBehaviour
         _Tutorial04.SetActive(true);
         _LeftButton04.SetActive(true);
         _RightButton04.SetActive(true);
+      
     }
 
     public void RightButton01()
@@ -89,6 +137,7 @@ public class LoadScene : MonoBehaviour
         _Tutorial02.SetActive(true);
         _LeftButton02.SetActive(true);
         _RightButton02.SetActive(true);
+        
     }
     public void RightButton02()
     {
@@ -98,6 +147,7 @@ public class LoadScene : MonoBehaviour
         _Tutorial03.SetActive(true);
         _LeftButton03.SetActive(true);
         _RightButton03.SetActive(true);
+        
 
     }
     public void RightButton03()
@@ -108,6 +158,7 @@ public class LoadScene : MonoBehaviour
         _Tutorial04.SetActive(true);
         _LeftButton04.SetActive(true);
         _RightButton04.SetActive(true);
+        
     }
     public void RightButton04()
     {
@@ -117,23 +168,19 @@ public class LoadScene : MonoBehaviour
         _Tutorial05.SetActive(true);
         _LeftButton05.SetActive(true);
         _LetsGoButton.SetActive(true);
+      
     }
 
     public void LetsGoButton()
     {
-        _Player.SetActive(true);
-        _Home.SetActive(true);
-        _MoneyBar.SetActive(true);
-        _TimeBar.SetActive(true);
-        _Day.SetActive(true);
-        _HappyBar.SetActive(true);
-        _QuestsButton.SetActive(true);
-        _CameraFollowPlayer.SetActive(true);
+        _HowToPlay.SetActive(true);
+        _HowToPlay02.SetActive(false);
         _Tutorial05.SetActive(false);
         _LeftButton05.SetActive(false);
         _LetsGoButton.SetActive(false);
-        _Bed.SetActive(true);
-        _BGM.SetActive(false);
+        _CameraFollowPlayer.SetActive(true);
+        
+
     }
 
     public void QuitGame()
