@@ -37,6 +37,11 @@ public class LootSystem : MonoBehaviour
     bool CheckReceiveItemClothing = false;
     bool CheckReceiveItemSpacialClothing = false;
 
+    private void Start()
+    {
+        SpinPrice = 20;
+    }
+
     public void Spawnner()
     {
         if (Player.money >= SpinPrice)
