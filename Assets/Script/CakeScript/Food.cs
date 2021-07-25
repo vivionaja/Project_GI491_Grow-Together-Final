@@ -7,6 +7,7 @@ public class Food : MonoBehaviour
     public GameObject _Food;
     public Player player;
     public Collider2D other;
+    public GameObject wrong;
 
 
     public AudioSource buttonSFX;
@@ -28,11 +29,21 @@ public class Food : MonoBehaviour
                 Player.thisSalmon = true;
                 player.QuestBuy();
             }
+            else
+            {
+                wrong.SetActive(true);
+                StartCoroutine(DeleyWrong());
+            }
         }
     }
     private void OnMouseExit()
     {
         _Food.SetActive(false);
+    }
+    IEnumerator DeleyWrong()
+    {
+        yield return new WaitForSeconds(2.0f);
+        wrong.SetActive(false);
     }
     
 }
