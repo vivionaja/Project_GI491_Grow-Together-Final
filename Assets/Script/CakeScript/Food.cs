@@ -8,6 +8,7 @@ public class Food : MonoBehaviour
     public Player player;
     public Collider2D other;
     public GameObject wrong;
+    public AudioSource wrongSFX;
 
 
     public AudioSource buttonSFX;
@@ -18,20 +19,23 @@ public class Food : MonoBehaviour
  
         if (Input.GetMouseButtonDown(0))
         {
-            buttonSFX.Play();
+           
             if(other.CompareTag("Quest5") )
             {
                 Player.thisMushroom = true;
+                buttonSFX.Play();
                 player.QuestBuy();
             }
             else if (other.CompareTag("Quest5.2"))
             {
                 Player.thisSalmon = true;
+                buttonSFX.Play();
                 player.QuestBuy();
             }
             else
             {
                 wrong.SetActive(true);
+                wrongSFX.Play();
                 StartCoroutine(DeleyWrong());
             }
         }

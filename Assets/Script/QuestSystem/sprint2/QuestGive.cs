@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QuestGive : MonoBehaviour
 {
+    public Text CountTxt;
     public GameObject _Happyyim;
     public GameObject _unHappyyim;
 
@@ -158,7 +159,7 @@ public class QuestGive : MonoBehaviour
 
     public void OpenWindowQuest()
     {
-        if (Player.haveQuest == false && player.currentQuest < player.maxQuest) 
+        if (Player.haveQuest == false ) 
         {
             questWindow.SetActive(true);
             logWindow.SetActive(false);
@@ -191,7 +192,7 @@ public class QuestGive : MonoBehaviour
 
     public void GiveQuest1()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 1)
+        if (Player.haveQuest == false && Player.HappyValue >= 1 && player.currentQuest < 3)
         {
             _MomWashDish.Play();
             questWindow.SetActive(false);
@@ -229,7 +230,7 @@ public class QuestGive : MonoBehaviour
 
     public void GiveQuest2()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 1)
+        if (Player.haveQuest == false && Player.HappyValue >= 1 && player.currentQuest < 3)
         {
             _MomPlant.Play();
             questWindow.SetActive(false);
@@ -269,7 +270,7 @@ public class QuestGive : MonoBehaviour
 
     public void GiveQuest3()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 0)
+        if (Player.haveQuest == false && Player.HappyValue >= 0 && player.currentQuest < 3)
         {
             questWindow.SetActive(false);
             questTitle.text = quest3.title;
@@ -284,7 +285,7 @@ public class QuestGive : MonoBehaviour
 
     public void AcceptQuest3()
     {
-        _QuestFin.Play();
+        
         quest3.goal.currentAmount = 0;
         buttonAccept[2].SetActive(false);
         popUpBrush.SetActive(true);
@@ -300,15 +301,15 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         _Happyyim.SetActive(false);
-        _FinPopUpBrush.SetActive(true);
-        Player.HappyValue += quest3.happyValue;
+        
+        
         Player.CheckHappy();
-        StartCoroutine(ExitpopUpQuest());
+        
     }
 
     public void GiveQuest4()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 0)
+        if (Player.haveQuest == false && Player.HappyValue >= 0 && player.currentQuest < 3)
         {
             questWindow.SetActive(false);
             questTitle.text = quest4.title;
@@ -323,7 +324,7 @@ public class QuestGive : MonoBehaviour
 
     public void AcceptQuest4()
     {
-        _QuestFin.Play();
+        
         quest4.goal.currentAmount = 0;
         buttonAccept[3].SetActive(false);
         Player.haveQ4 = true;
@@ -340,15 +341,14 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         _Happyyim.SetActive(false);
-        _FinPopUpBath.SetActive(true);
-        Player.HappyValue += quest4.happyValue;
+       
         Player.CheckHappy();
-        StartCoroutine(ExitpopUpQuest());
+        
     }
 
     public void GiveQuest5()
     {
-        if (Player.haveQuest == false && Player.HappyValue > 0)
+        if (Player.haveQuest == false && Player.HappyValue > 0 && player.currentQuest < 3)
         {
             _MomMarket.Play();
             questWindow.SetActive(false);
@@ -386,7 +386,7 @@ public class QuestGive : MonoBehaviour
 
     public void GiveQuest6()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 0)
+        if (Player.haveQuest == false && Player.HappyValue >= 0 && player.currentQuest < 3)
         {
             questWindow.SetActive(false);
             questTitle.text = quest6.title;
@@ -401,7 +401,7 @@ public class QuestGive : MonoBehaviour
 
     public void AcceptQuest6()
     {
-        _QuestFin.Play();
+        
         quest6.goal.currentAmount = 0;
         buttonAccept[5].SetActive(false);
         Player.haveQ6 = true;
@@ -418,15 +418,14 @@ public class QuestGive : MonoBehaviour
         infoQuest.SetActive(false);
         popUpHelp.SetActive(false);
         _Happyyim.SetActive(false);
-        _FinPopUpEat.SetActive(true);
-        Player.HappyValue += quest6.happyValue;
+        
         Player.CheckHappy();
-        StartCoroutine(ExitpopUpQuest());
+        
     }
 
     public void GiveQuest7()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 2)
+        if (Player.haveQuest == false && Player.HappyValue >= 2 && player.currentQuest < 3)
         {
             _MomMopping.Play();
             questWindow.SetActive(false);
@@ -464,7 +463,7 @@ public class QuestGive : MonoBehaviour
 
     public void GiveQuest8()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 2)
+        if (Player.haveQuest == false && Player.HappyValue >= 2 && player.currentQuest < 3)
         {
             _MomCloth.Play();
             questWindow.SetActive(false);
@@ -500,7 +499,7 @@ public class QuestGive : MonoBehaviour
 
     public void GiveQuest9()
     {
-        if (Player.haveQuest == false && Player.HappyValue >= 2)
+        if (Player.haveQuest == false && Player.HappyValue >= 2 && player.currentQuest < 3)
         {
             _MomSweep.Play();
             questWindow.SetActive(false);
@@ -545,6 +544,7 @@ public class QuestGive : MonoBehaviour
                 questWindowtxt.SetActive(false);
                 descritWindowtxt.SetActive(false);
                 player.currentQuest += 1;
+                CountTxt.text = player.currentQuest + "/3";
                 Player.haveQuest = false;
                 popUpHelp.SetActive(true);
                 if (quest1.isFinish == true)
@@ -612,6 +612,9 @@ public class QuestGive : MonoBehaviour
                 else if (quest3.isFinish == true)
                 {
                     _QuestFin.Play();
+                    Player.HappyValue += quest3.happyValue;
+                    StartCoroutine(ExitpopUpQuest());
+                    _FinPopUpBrush.SetActive(true);
                     Textbutton[7].SetActive(false);
                     Textbutton[8].SetActive(false);
                     Textbutton[9].SetActive(false);
@@ -621,6 +624,9 @@ public class QuestGive : MonoBehaviour
                 else if (quest4.isFinish == true)
                 {
                     _QuestFin.Play();
+                    _FinPopUpBath.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
+                    Player.HappyValue += quest4.happyValue;
                     Player.haveQ4 = false;
                     Textbutton[11].SetActive(false);
                     Textbutton[12].SetActive(false);
@@ -684,6 +690,9 @@ public class QuestGive : MonoBehaviour
                 else if (quest6.isFinish == true)
                 {
                     _QuestFin.Play();
+                    _FinPopUpEat.SetActive(true);
+                    StartCoroutine(ExitpopUpQuest());
+                    Player.HappyValue += quest6.happyValue;
                     Player.haveQ6 = false;
                     Textbutton[19].SetActive(false);
                     Textbutton[20].SetActive(false);

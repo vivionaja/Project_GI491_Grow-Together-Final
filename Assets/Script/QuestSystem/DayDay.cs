@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class DayDay : MonoBehaviour
 {
+    public Text desEvent;
+    public Text countText;
+
     public GameObject popUpHelp;
     public Transform spawnpoint;
     public static int day = 0;
@@ -97,10 +100,14 @@ public class DayDay : MonoBehaviour
         else if (timerMin == 0 && timerSec == 0)
         {
             timerDisplay.GetComponent<Text>().text = "0" + timerMin + ":0" + timerSec;
-            if (player.lateSleep == true)
+            if (player.lateLateSleep == true)
+            {
+                player.lateLateLateSleep = true;
+            }
+            else if (player.lateSleep == true)
             {
                 player.lateLateSleep = true;
-                _GoToBedLate02.SetActive(true);
+               
             }
             player.lateSleep = true; 
             lateSleep();
@@ -126,14 +133,21 @@ public class DayDay : MonoBehaviour
         day += 1;
         if (day % 5 == 0)
         {
-            LootSystem.SpinPrice = 15;
+            desEvent.text = "Money reward from quest will be doubled.";
         }
-        else if (day % 7 == 0)
+        if (day % 7 == 0)
+        {
+            LootSystem.SpinPrice = 15;
+            desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $15.";
+        }
+        else if (day % 11 == 0)
         {
             LootSystem.SpinPrice = 10;
+            desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $10.";
         }
         dayTxt.text = "Day : " + day;
         player.currentQuest = 0;
+        countText.text = player.currentQuest + "/3";
         popUpHelp.SetActive(true);
         player1.transform.position = spawnpoint.transform.position;
         happyTownMap.SetActive(false);
@@ -201,10 +215,12 @@ public class DayDay : MonoBehaviour
         sleep = true;
         endScenesSleep.SetActive(true);
         _CameraFollowPlayer.SetActive(true);
+        _GoToBedLate02.SetActive(false);
         _GoToBedLate.SetActive(true);
-        if (player.lateLateSleep == true)
+        if (player.lateLateLateSleep == true)
         {
             _GoToBedLate.SetActive(false);
+            _GoToBedLate02.SetActive(true);
         }
 
         PlayerController2D.InShop = true;

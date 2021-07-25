@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
    
     public bool lateSleep;
     public bool lateLateSleep;
+    public bool lateLateLateSleep;
     public int maxQuest = 3;
     public int currentQuest;
 
