@@ -56,6 +56,7 @@ public class DayDay : MonoBehaviour
     public GameObject _CameraFollowPlayer;
     public GameObject BGMHome;
 
+    public GameObject _Tutorial;
 
     // Start is called before the first frame update
     void Start()
@@ -212,6 +213,7 @@ public class DayDay : MonoBehaviour
         SpinButton.SetActive(false);
         Bakery.SetActive(false);
         Market.SetActive(false);
+        _Tutorial.SetActive(false);
         sleep = true;
         endScenesSleep.SetActive(true);
         _CameraFollowPlayer.SetActive(true);
@@ -254,6 +256,7 @@ public class DayDay : MonoBehaviour
         _GoToBedLate.SetActive(false);
         _GoToBedLate02.SetActive(false);
         _SleepOnTime.SetActive(false);
+        _Tutorial.SetActive(true);
         PlayerController2D.InShop = false;
     }
 

@@ -19,11 +19,9 @@ public class AchievementPopUpInBook : MonoBehaviour
     }
     public void ClosePopUpInBook()
     {
-
         Debug.Log("Close");
         _PopUpAchievementInBook.SetActive(false);
         _CloseButton.SetActive(false);
-
     }
 
 }

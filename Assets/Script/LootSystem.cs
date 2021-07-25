@@ -17,8 +17,10 @@ public class LootSystem : MonoBehaviour
     public GameObject _Money50Bath;
     public GameObject _Clothing;
     public GameObject _ClothingInBook;
+    public static bool _itemToEndGame01 = false;
     public GameObject _SpacialClothing;
     public GameObject _SpacialClothingInBook;
+    public static bool _itemToEndGame02 = false;
 
     float SpinNumber;
 
@@ -40,6 +42,26 @@ public class LootSystem : MonoBehaviour
     private void Start()
     {
         SpinPrice = 20;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("P");
+            CheckReceiveItemClothing = true;
+            _Clothing.SetActive(true);
+            _ClothingInBook.SetActive(true);
+            _itemToEndGame01 = true;
+            CheckReceiveItemSpacialClothing = true;
+            _SpacialClothing.SetActive(true);
+            _SpacialClothingInBook.SetActive(true);
+            _itemToEndGame02 = true;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Player.money += 1000;
+        }
     }
 
     public void Spawnner()
@@ -83,6 +105,7 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
 
                 }
                 else if (SpinNumber > 99 && SpinNumber <= 100)
@@ -90,6 +113,7 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
             if (Player.HappyValue > 1 && Player.HappyValue <= 3)
@@ -122,12 +146,14 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
                 }
                 else if (SpinNumber > 98 && SpinNumber <= 100)
                 {
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
             if (Player.HappyValue > 3 && Player.HappyValue <= 5)
@@ -160,12 +186,14 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
                 }
                 else if (SpinNumber > 98 && SpinNumber <= 100)
                 {
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
             if (Player.HappyValue > 5 && Player.HappyValue <= 7)
@@ -198,12 +226,14 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
                 }
                 else if (SpinNumber > 97 && SpinNumber <= 100)
                 {
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
             if (Player.HappyValue > 7 && Player.HappyValue <= 9)
@@ -236,12 +266,14 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
                 }
                 else if (SpinNumber > 97 && SpinNumber <= 100)
                 {
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
             if (Player.HappyValue > 9 && Player.HappyValue <= 11)
@@ -274,12 +306,14 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
                 }
                 else if (SpinNumber > 96 && SpinNumber <= 100)
                 {
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
             if (Player.HappyValue == 12)
@@ -312,12 +346,14 @@ public class LootSystem : MonoBehaviour
                     CheckReceiveItemClothing = true;
                     _Clothing.SetActive(true);
                     _ClothingInBook.SetActive(true);
+                    _itemToEndGame01 = true;
                 }
                 else if (SpinNumber > 95 && SpinNumber <= 100)
                 {
                     CheckReceiveItemSpacialClothing = true;
                     _SpacialClothing.SetActive(true);
                     _SpacialClothingInBook.SetActive(true);
+                    _itemToEndGame02 = true;
                 }
             }
         }

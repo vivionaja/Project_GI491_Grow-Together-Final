@@ -69,8 +69,6 @@ public class LoadScene : MonoBehaviour
         _HowToPlay02.SetActive(true);
         _Tutorial01.SetActive(true);
         _RightButton01.SetActive(true);
-        _CameraFollowPlayer.SetActive(false);
-        
     }
 
     public void HowToPlay02()
@@ -95,7 +93,6 @@ public class LoadScene : MonoBehaviour
         _LeftButton06.SetActive(false);
         _LeftButton07.SetActive(false);
         _LetsGoButton.SetActive(false);
-        _CameraFollowPlayer.SetActive(true);
         _HowToPlay.SetActive(true);
         _HowToPlay02.SetActive(false);
         
@@ -108,8 +105,6 @@ public class LoadScene : MonoBehaviour
         _RightButton02.SetActive(false);
         _Tutorial01.SetActive(true);
         _RightButton01.SetActive(true);
-      
-
     }
     public void LeftButtonTutorial03()
     {
@@ -135,11 +130,30 @@ public class LoadScene : MonoBehaviour
     {
         _Tutorial05.SetActive(false);
         _LeftButton05.SetActive(false);
-        _LetsGoButton.SetActive(false);
+        _RightButton05.SetActive(false);
         _Tutorial04.SetActive(true);
         _LeftButton04.SetActive(true);
         _RightButton04.SetActive(true);
-      
+    }
+
+    public void LeftButtonTutorial06()
+    {
+        _Tutorial06.SetActive(false);
+        _LeftButton06.SetActive(false);
+        _RightButton06.SetActive(false);
+        _Tutorial05.SetActive(true);
+        _LeftButton05.SetActive(true);
+        _RightButton05.SetActive(true);
+    }
+
+    public void LeftButtonTutorial07()
+    {
+        _Tutorial07.SetActive(false);
+        _LeftButton07.SetActive(false);
+        _Tutorial06.SetActive(true);
+        _LeftButton06.SetActive(true);
+        _RightButton06.SetActive(true);
+        _LetsGoButton.SetActive(false);
     }
 
     public void RightButton01()
@@ -179,20 +193,36 @@ public class LoadScene : MonoBehaviour
         _RightButton04.SetActive(false);
         _Tutorial05.SetActive(true);
         _LeftButton05.SetActive(true);
+        _RightButton05.SetActive(true);
+    }
+
+    public void RightButton05()
+    {
+        _Tutorial05.SetActive(false);
+        _LeftButton05.SetActive(false);
+        _RightButton05.SetActive(false);
+        _Tutorial06.SetActive(true);
+        _LeftButton06.SetActive(true);
+        _RightButton06.SetActive(true);
+    }
+
+    public void RightButton06()
+    {
+        _Tutorial06.SetActive(false);
+        _LeftButton06.SetActive(false);
+        _RightButton06.SetActive(false);
+        _Tutorial07.SetActive(true);
+        _LeftButton07.SetActive(true);
         _LetsGoButton.SetActive(true);
-      
     }
 
     public void LetsGoButton()
     {
         _HowToPlay.SetActive(true);
         _HowToPlay02.SetActive(false);
-        _Tutorial05.SetActive(false);
-        _LeftButton05.SetActive(false);
+        _Tutorial07.SetActive(false);
+        _LeftButton07.SetActive(false);
         _LetsGoButton.SetActive(false);
-        _CameraFollowPlayer.SetActive(true);
-        
-
     }
 
     public void QuitGame()

@@ -70,7 +70,10 @@ public class QuestGive : MonoBehaviour
 
     //Achievements
     public GameObject popUpAchievements;
-    int CountQuest;
+    int CountQuest1;
+    int CountQuest2;
+    int CountQuest3;
+    int CountQuest4;
     int maxCountQuest = 100;
     //Mopping
     public GameObject popUpMoppingAchievementsCopper;
@@ -128,6 +131,45 @@ public class QuestGive : MonoBehaviour
         if (player.currentQuest == player.maxQuest)
         {
             popUpHelp.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            CountQuest1 += 10;
+            if (CountQuest1 == 10 && WaterPlantsAchievementsCompleteCopper == false)
+            {
+                unlockAchieveSFX.Play();
+                Debug.Log("Copper");
+                Player.money += 100;
+                popUpAchievements.SetActive(true);
+                popUpWaterPlantsAchievementsCopper.SetActive(true);
+                WaterPlantsAchievementsCollecCopper.SetActive(true);
+                WaterPlantsAchievementsCompleteCopper = true;
+                StartCoroutine(ExitpopUpAchievements());
+            }
+            if (CountQuest1 == 50 && WaterPlantsAchievementsCompleteSilver == false)
+            {
+                unlockAchieveSFX.Play();
+                Debug.Log("Silver");
+                Player.money += 200;
+                popUpAchievements.SetActive(true);
+                popUpWaterPlantsAchievementsSilver.SetActive(true);
+                WaterPlantsAchievementsCollecCopper.SetActive(false);
+                WaterPlantsAchievementsCollecSilver.SetActive(true);
+                WaterPlantsAchievementsCompleteSilver = true;
+                StartCoroutine(ExitpopUpAchievements());
+            }
+            if (CountQuest1 == 100 && WaterPlantsAchievementsCompleteGold == false)
+            {
+                unlockAchieveSFX.Play();
+                Debug.Log("Gold");
+                Player.money += 300;
+                popUpAchievements.SetActive(true);
+                popUpWaterPlantsAchievementsGold.SetActive(true);
+                WaterPlantsAchievementsCollecSilver.SetActive(false);
+                WaterPlantsAchievementsCollecGold.SetActive(true);
+                WaterPlantsAchievementsCompleteGold = true;
+                StartCoroutine(ExitpopUpAchievements());
+            }
         }
     }
 
@@ -569,10 +611,10 @@ public class QuestGive : MonoBehaviour
                     _FinPopUpWater.SetActive(true);
                     StartCoroutine(ExitpopUpQuest());
 
-                    if (CountQuest < maxCountQuest)
+                    if (CountQuest1 < maxCountQuest)
                     {
-                        CountQuest += 1;
-                        if (CountQuest == 10 && WaterPlantsAchievementsCompleteCopper == false)
+                        CountQuest1 += 1;
+                        if (CountQuest1 == 10 && WaterPlantsAchievementsCompleteCopper == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Copper");
@@ -583,7 +625,7 @@ public class QuestGive : MonoBehaviour
                             WaterPlantsAchievementsCompleteCopper = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 50 && WaterPlantsAchievementsCompleteSilver == false)
+                        if (CountQuest1 == 50 && WaterPlantsAchievementsCompleteSilver == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Silver");
@@ -595,7 +637,7 @@ public class QuestGive : MonoBehaviour
                             WaterPlantsAchievementsCompleteSilver = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 100 && WaterPlantsAchievementsCompleteGold == false)
+                        if (CountQuest1 == 100 && WaterPlantsAchievementsCompleteGold == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Gold");
@@ -647,10 +689,10 @@ public class QuestGive : MonoBehaviour
                     _FinPopUpBuy.SetActive(true);
                     StartCoroutine(ExitpopUpQuest());
 
-                    if (CountQuest < maxCountQuest)
+                    if (CountQuest2 < maxCountQuest)
                     {
-                        CountQuest += 1;
-                        if (CountQuest == 10 && MarketAchievementsCompleteCopper == false)
+                        CountQuest2 += 1;
+                        if (CountQuest2 == 10 && MarketAchievementsCompleteCopper == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Copper");
@@ -661,7 +703,7 @@ public class QuestGive : MonoBehaviour
                             MarketAchievementsCompleteCopper = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 50 && MarketAchievementsCompleteSilver == false)
+                        if (CountQuest2 == 50 && MarketAchievementsCompleteSilver == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Silver");
@@ -673,7 +715,7 @@ public class QuestGive : MonoBehaviour
                             MarketAchievementsCompleteSilver = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 100 && MarketAchievementsCompleteGold == false)
+                        if (CountQuest2 == 100 && MarketAchievementsCompleteGold == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Gold");
@@ -712,10 +754,10 @@ public class QuestGive : MonoBehaviour
                     _FinPopUpRub.SetActive(true);
                     StartCoroutine(ExitpopUpQuest());
 
-                    if (CountQuest < maxCountQuest)
+                    if (CountQuest3 < maxCountQuest)
                     {
-                        CountQuest += 1;
-                        if (CountQuest == 10 && MoppingAchievementsCompleteCopper == false)
+                        CountQuest3 += 1;
+                        if (CountQuest3 == 10 && MoppingAchievementsCompleteCopper == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Copper");
@@ -726,7 +768,7 @@ public class QuestGive : MonoBehaviour
                             MoppingAchievementsCompleteCopper = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 50 && MoppingAchievementsCompleteSilver == false)
+                        if (CountQuest3 == 50 && MoppingAchievementsCompleteSilver == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Silver");
@@ -738,7 +780,7 @@ public class QuestGive : MonoBehaviour
                             MoppingAchievementsCompleteSilver = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 100 && MoppingAchievementsCompleteGold == false)
+                        if (CountQuest3 == 100 && MoppingAchievementsCompleteGold == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Gold");
@@ -762,10 +804,10 @@ public class QuestGive : MonoBehaviour
                     _FinPopUpPick.SetActive(true);
                     StartCoroutine(ExitpopUpQuest());
 
-                    if (CountQuest < maxCountQuest)
+                    if (CountQuest4 < maxCountQuest)
                     {
-                        CountQuest += 1;
-                        if (CountQuest == 10 && PickUpClothAchievementsCompleteCopper == false)
+                        CountQuest4 += 1;
+                        if (CountQuest4 == 10 && PickUpClothAchievementsCompleteCopper == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Copper");
@@ -776,7 +818,7 @@ public class QuestGive : MonoBehaviour
                             PickUpClothAchievementsCompleteCopper = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 50 && MoppingAchievementsCompleteSilver == false)
+                        if (CountQuest4 == 50 && MoppingAchievementsCompleteSilver == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Silver");
@@ -788,7 +830,7 @@ public class QuestGive : MonoBehaviour
                             PickUpClothAchievementsCompleteSilver = true;
                             StartCoroutine(ExitpopUpAchievements());
                         }
-                        if (CountQuest == 100 && MoppingAchievementsCompleteGold == false)
+                        if (CountQuest4 == 100 && MoppingAchievementsCompleteGold == false)
                         {
                             unlockAchieveSFX.Play();
                             Debug.Log("Gold");
