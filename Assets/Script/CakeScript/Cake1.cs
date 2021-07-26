@@ -22,6 +22,7 @@ public class Cake1 : MonoBehaviour
                 
                 if (Player.money >= CakePrice)
                 {
+                    TutorialGuide.isGoBakery = true;
                     MoneySFX.Play();
                     Player.HappyValue += HappyValue;
                     Player.money -= CakePrice;

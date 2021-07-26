@@ -36,8 +36,8 @@ public class DayDay : MonoBehaviour
     public GameObject endScenesSleep;
 
     public GameObject timerDisplay;
-    public int timerMin;
-    public int timerSec;
+    public static int timerMin;
+    public static int timerSec;
     public bool takingAway = true;
     public static bool sleep = false;
 
@@ -57,17 +57,22 @@ public class DayDay : MonoBehaviour
     public GameObject BGMHome;
 
     public GameObject _Tutorial;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
         RandomQuest();
         takingAway = false;
-        timerMin = 3;
-        timerSec = 00;
-        day = 1;
+        timerMin = 0;
+        timerSec = -1;
+        day = 0;
         dayTxt.text = "Day : " + day;
         timerDisplay.GetComponent<Text>().text = "0" + timerMin + ":" + timerSec;
+        if (day % 5 == 0)
+        {
+            desEvent.text = "Money reward from quest will be doubled.";
+        }
 
     }
 
@@ -78,6 +83,17 @@ public class DayDay : MonoBehaviour
             StartCoroutine(TimerTake());
         }
         UseGoSleep();
+    }
+    public static void TimeTutorial()
+    {
+        timerSec = 5;
+    }
+    public void TimeStart ()
+    {
+        day = 1;
+        timerMin = 3;
+        timerSec = 00;
+        dayTxt.text = "Day : " + day;
     }
 
     void TimerSet()
@@ -145,6 +161,10 @@ public class DayDay : MonoBehaviour
         {
             LootSystem.SpinPrice = 10;
             desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $10.";
+        }
+        else
+        {
+            desEvent.text = "";
         }
         dayTxt.text = "Day : " + day;
         player.currentQuest = 0;
@@ -243,6 +263,7 @@ public class DayDay : MonoBehaviour
    
     public void endScene()
     {
+        TutorialGuide.isEndTu = true;
         QuestGive.isEndseen = true;
         isRan = false;
         endScenesSleep.SetActive(false);

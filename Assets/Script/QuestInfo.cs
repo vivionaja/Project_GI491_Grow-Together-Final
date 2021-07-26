@@ -25,6 +25,7 @@ public class QuestInfo : MonoBehaviour
     }
     public void BackButton()
     {
+        TutorialGuide.isQuestBrush = true;
         _QuestWindow.SetActive(false);
     }
 }

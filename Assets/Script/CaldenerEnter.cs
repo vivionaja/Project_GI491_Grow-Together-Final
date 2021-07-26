@@ -35,6 +35,7 @@ public class CaldenerEnter : MonoBehaviour
     public void CloseCaldener()
     {
         _Caldener.SetActive(false);
+        TutorialGuide.isEvent = true;
     }
 
 }

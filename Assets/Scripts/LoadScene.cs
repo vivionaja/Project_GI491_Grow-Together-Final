@@ -61,6 +61,7 @@ public class LoadScene : MonoBehaviour
         _CameraFollowPlayer.SetActive(true);
         _Bed.SetActive(true);
         _BGM.SetActive(false);
+        TutorialGuide.isStart = true;
 
     }
     public void HowToPlay()

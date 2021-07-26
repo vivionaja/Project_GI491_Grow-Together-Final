@@ -12,7 +12,7 @@ public class EndGameScript : MonoBehaviour
         if(Player.money >= 1000 && LootSystem._itemToEndGame01 == true && LootSystem._itemToEndGame02 == true)
         {
             Debug.Log("end");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }

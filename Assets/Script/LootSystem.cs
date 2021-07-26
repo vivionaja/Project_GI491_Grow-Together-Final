@@ -68,6 +68,7 @@ public class LootSystem : MonoBehaviour
     {
         if (Player.money >= SpinPrice)
         {
+            
             Check = true;
             spinSFX.Play();
             _Roulette01.SetActive(false);
@@ -362,6 +363,7 @@ public class LootSystem : MonoBehaviour
 
     public void Close()
     {
+        TutorialGuide.isGoMagic = true;
         _Roulette01.SetActive(true);
         _Roulette02.SetActive(false);
         _SpinItem_Window.SetActive(false);
