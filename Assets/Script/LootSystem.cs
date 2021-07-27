@@ -48,22 +48,22 @@ public class LootSystem : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    Debug.Log("P");
-        //    CheckReceiveItemClothing = true;
-        //    _Clothing.SetActive(true);
-        //    _ClothingInBook.SetActive(true);
-        //    _itemToEndGame01 = true;
-        //    CheckReceiveItemSpacialClothing = true;
-        //    _SpacialClothing.SetActive(true);
-        //    _SpacialClothingInBook.SetActive(true);
-        //    _itemToEndGame02 = true;
-        //}
-        //if (Input.GetKeyDown(KeyCode.M))
-        //{
-        //    Player.money += 1000;
-        //}
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("P");
+            CheckReceiveItemClothing = true;
+            _Clothing.SetActive(true);
+            _ClothingInBook.SetActive(true);
+            _itemToEndGame01 = true;
+            CheckReceiveItemSpacialClothing = true;
+            _SpacialClothing.SetActive(true);
+            _SpacialClothingInBook.SetActive(true);
+            _itemToEndGame02 = true;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Player.money += 1000;
+        }
     }
 
     public void Spawnner()
