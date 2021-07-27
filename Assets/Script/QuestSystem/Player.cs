@@ -102,6 +102,10 @@ public class Player : MonoBehaviour
         {
             _Unhappy.SetActive(false);
         }
+        if (HappyValue >12)
+        {
+            HappyValue = 12;
+        }
     }
     public static void CheckHappy()
     {
