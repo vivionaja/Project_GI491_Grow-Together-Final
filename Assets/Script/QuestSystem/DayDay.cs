@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DayDay : MonoBehaviour
 {
+    public GameObject popBed;
     public GameObject[] SpecialDeal;
     public GameObject buttonWakeUp;
     public Text desEvent;
@@ -65,6 +66,7 @@ public class DayDay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        popBed.GetComponent<Collider2D>();
         RandomQuest();
         takingAway = false;
         timerMin = 0;
@@ -94,7 +96,7 @@ public class DayDay : MonoBehaviour
     public void TimeStart ()
     {
         day = 1;
-        timerMin = 3;
+        timerMin = 4;
         timerSec = 00;
         dayTxt.text = "Day : " + day;
         
@@ -123,7 +125,7 @@ public class DayDay : MonoBehaviour
     void TimerSet()
     {
         takingAway = false;
-        timerMin = 3;
+        timerMin = 4;
         timerSec = 00;
         dayTxt.text = "Day : " + day;
         timerDisplay.GetComponent<Text>().text = "0" + timerMin + ":" + timerSec;
@@ -177,12 +179,14 @@ public class DayDay : MonoBehaviour
             LootSystem.SpinPrice = 15;
             desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $15.";
             SpecialDeal[0].SetActive(true);
+            SpecialDeal[1].SetActive(false);
         }
         else if (day % 11 == 0)
         {
             LootSystem.SpinPrice = 10;
             desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $10.";
             SpecialDeal[1].SetActive(true);
+            SpecialDeal[0].SetActive(false);
         }
         else
         {
@@ -204,8 +208,9 @@ public class DayDay : MonoBehaviour
         happyTownMap.SetActive(false);
         home.SetActive(true);
         RandomQuest();
+        popBed.GetComponent<Collider2D>().enabled = true;
 
-        
+
         if (player.lateLateSleep == true && player.lateSleep == true)
         {
             Player.HappyValue = 2;
@@ -245,6 +250,8 @@ public class DayDay : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Checkbed == true)
         {
             GoSleep();
+            popBed.GetComponent<Collider2D>().enabled = false;
+
         }
     }
 
@@ -311,6 +318,7 @@ public class DayDay : MonoBehaviour
         _SleepOnTime.SetActive(false);
         _Tutorial.SetActive(true);
         PlayerController2D.InShop = false;
+        
     }
 
     public void RandomQuest()

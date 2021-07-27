@@ -397,9 +397,9 @@ GameObject:
   m_Component:
   - component: {fileID: 18497455}
   - component: {fileID: 18497456}
+  - component: {fileID: 18497459}
   - component: {fileID: 18497457}
   - component: {fileID: 18497458}
-  - component: {fileID: 18497459}
   m_Layer: 0
   m_Name: Bed
   m_TagString: bed
@@ -513,6 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d6256c52dd39c46811174b887d131e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popBed: {fileID: 18497454}
   SpecialDeal:
   - {fileID: 998946541}
   - {fileID: 1455946616}
@@ -568,7 +569,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18497454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -44727,6 +44728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eed01c1ad607f64394771d798aafa02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bed: {fileID: 18497454}
   endTextTu: {fileID: 90013328}
   TutorialText: {fileID: 1023569862}
   countText: {fileID: 819173555}

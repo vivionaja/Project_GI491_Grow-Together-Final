@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TutorialGuide : MonoBehaviour
 {
     DayDay day;
-    
+    public GameObject bed;
     public GameObject endTextTu;
     public GameObject TutorialText;
     public GameObject countText;
@@ -46,7 +46,8 @@ public class TutorialGuide : MonoBehaviour
         }
         if (isEvent == true)
         {
-            desGuide.text = "Go talk to your mom, walk to her and press 'Spacebar'.";
+            bed.GetComponent<Collider2D>().enabled = true;
+            desGuide.text = "Go talk to your mom, walk to her and press 'Spacebar' or you can skip tutorial by go to bed and press 'Spacebar'.";
             Destroy(BlockPath[0]);
         }
         if (isLogmom == true)
@@ -124,4 +125,5 @@ public class TutorialGuide : MonoBehaviour
         yield return new WaitForSeconds(4.0f);
         Destroy(TutorialText);
     }
+    
 }
