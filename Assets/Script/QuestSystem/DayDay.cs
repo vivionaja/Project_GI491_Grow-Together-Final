@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DayDay : MonoBehaviour
 {
+    public GameObject[] SpecialDeal;
+
     public Text desEvent;
     public Text countText;
 
@@ -94,10 +96,7 @@ public class DayDay : MonoBehaviour
         timerMin = 3;
         timerSec = 00;
         dayTxt.text = "Day : " + day;
-        if (day % 5 == 0)
-        {
-            desEvent.text = "Money reward from quest will be doubled.";
-        }
+        
         if (day % 7 == 0)
         {
             LootSystem.SpinPrice = 15;
@@ -111,6 +110,10 @@ public class DayDay : MonoBehaviour
         else
         {
             desEvent.text = "";
+        }
+        if (day % 5 == 0)
+        {
+            desEvent.text = "Money reward from quest will be doubled.";
         }
         isRan = false;
         RandomQuest();
@@ -168,24 +171,29 @@ public class DayDay : MonoBehaviour
     public void NextDay()
     {
         day += 1;
-        if (day % 5 == 0)
-        {
-            desEvent.text = "Money reward from quest will be doubled.";
-        }
         if (day % 7 == 0)
         {
             LootSystem.SpinPrice = 15;
             desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $15.";
+            SpecialDeal[0].SetActive(true);
         }
         else if (day % 11 == 0)
         {
             LootSystem.SpinPrice = 10;
             desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $10.";
+            SpecialDeal[1].SetActive(true);
         }
         else
         {
             desEvent.text = "";
+            SpecialDeal[0].SetActive(false);
+            SpecialDeal[1].SetActive(false);
         }
+        if (day % 5 == 0)
+        {
+            desEvent.text = "Money reward from quest will be doubled.";
+        }
+       
         dayTxt.text = "Day : " + day;
         player.currentQuest = 0;
         countText.text = player.currentQuest + "/3";
