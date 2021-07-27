@@ -94,6 +94,26 @@ public class DayDay : MonoBehaviour
         timerMin = 3;
         timerSec = 00;
         dayTxt.text = "Day : " + day;
+        if (day % 5 == 0)
+        {
+            desEvent.text = "Money reward from quest will be doubled.";
+        }
+        if (day % 7 == 0)
+        {
+            LootSystem.SpinPrice = 15;
+            desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $15.";
+        }
+        else if (day % 11 == 0)
+        {
+            LootSystem.SpinPrice = 10;
+            desEvent.text = "Price for spinning the wheel at the magic shop will be changed to $10.";
+        }
+        else
+        {
+            desEvent.text = "";
+        }
+        isRan = false;
+        RandomQuest();
     }
 
     void TimerSet()

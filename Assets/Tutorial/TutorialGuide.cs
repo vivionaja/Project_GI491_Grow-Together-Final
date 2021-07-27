@@ -104,6 +104,7 @@ public class TutorialGuide : MonoBehaviour
         }
         if (isEndTu == true)
         {
+            TutorialText.SetActive(false);
             endTextTu.SetActive(true);
         }
     }
