@@ -372,6 +372,7 @@ MonoBehaviour:
   SpecialDeal:
   - {fileID: 998946541}
   - {fileID: 1455946616}
+  buttonWakeUp: {fileID: 2123732567}
   desEvent: {fileID: 196664136}
   countText: {fileID: 1695045371}
   popUpHelp: {fileID: 158269193}
@@ -397,6 +398,8 @@ MonoBehaviour:
   player: {fileID: 6970045673910925726}
   endScenesSleep: {fileID: 1273922293}
   timerDisplay: {fileID: 761189341}
+  timerMin: 0
+  timerSec: 0
   takingAway: 1
   LootQuest:
   - {fileID: 7859112103654820759}
@@ -43685,7 +43688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2123732568
 RectTransform:
   m_ObjectHideFlags: 0

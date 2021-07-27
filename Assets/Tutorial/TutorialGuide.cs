@@ -98,7 +98,6 @@ public class TutorialGuide : MonoBehaviour
             desGuide.text = "Oh no! Time’s up! I have to go to bed, otherwise my Happiness will decrease.";
             if (isDosleep == false)
             {
-                DayDay.TimeTutorial();
                 isDosleep = true;
             }
         }

@@ -516,6 +516,7 @@ MonoBehaviour:
   SpecialDeal:
   - {fileID: 998946541}
   - {fileID: 1455946616}
+  buttonWakeUp: {fileID: 2123732567}
   desEvent: {fileID: 196664136}
   countText: {fileID: 1695045371}
   popUpHelp: {fileID: 158269193}
@@ -541,6 +542,8 @@ MonoBehaviour:
   player: {fileID: 6970045673910925726}
   endScenesSleep: {fileID: 1273922293}
   timerDisplay: {fileID: 761189341}
+  timerMin: 0
+  timerSec: 0
   takingAway: 1
   LootQuest:
   - {fileID: 864824711363508471}
@@ -36539,6 +36542,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 18497458}
+        m_TargetAssemblyTypeName: DayDay, Assembly-CSharp
+        m_MethodName: TimeTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1625709828
 GameObject:
   m_ObjectHideFlags: 0
@@ -47556,7 +47571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2123732568
 RectTransform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DayDay : MonoBehaviour
 {
     public GameObject[] SpecialDeal;
-
+    public GameObject buttonWakeUp;
     public Text desEvent;
     public Text countText;
 
@@ -38,8 +38,8 @@ public class DayDay : MonoBehaviour
     public GameObject endScenesSleep;
 
     public GameObject timerDisplay;
-    public static int timerMin;
-    public static int timerSec;
+    public int timerMin;
+    public int timerSec;
     public bool takingAway = true;
     public static bool sleep = false;
 
@@ -86,7 +86,7 @@ public class DayDay : MonoBehaviour
         }
         UseGoSleep();
     }
-    public static void TimeTutorial()
+    public void TimeTutorial()
     {
         timerSec = 5;
     }
@@ -219,6 +219,7 @@ public class DayDay : MonoBehaviour
             
             Player.HappyValue = 6;
         }
+        buttonWakeUp.SetActive(false);
 
     }
 
@@ -275,7 +276,7 @@ public class DayDay : MonoBehaviour
         }
 
         PlayerController2D.InShop = true;
-        
+        StartCoroutine(deleyButtonWake());
     }
 
     public void GoSleep()
@@ -288,6 +289,7 @@ public class DayDay : MonoBehaviour
         endScenesSleep.SetActive(true);
         _SleepOnTime.SetActive(true);
         PlayerController2D.InShop = true;
+        StartCoroutine(deleyButtonWake());
     }
    
     public void endScene()
@@ -369,6 +371,12 @@ public class DayDay : MonoBehaviour
             isRan = true;
         }
 
+    }
+
+    IEnumerator deleyButtonWake()
+    {
+        yield return new WaitForSeconds(2.0f);
+        buttonWakeUp.SetActive(true);
     }
 }
 
