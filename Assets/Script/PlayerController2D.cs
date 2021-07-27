@@ -64,7 +64,29 @@ public class PlayerController2D : MonoBehaviour
                 dirFireX = 0f;
                 dirFireY = mass * -1 * acceleration;
             }
-            
+            if (Input.GetKey(KeyCode.A))
+            {
+                dirFireX = mass * -1 * acceleration;
+                dirFireY = 0f;
+                spritePlayer.flipX = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                spritePlayer.flipX = false;
+                dirFireX = mass * acceleration;
+                dirFireY = 0f;
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                dirFireX = 0f;
+                dirFireY = mass * acceleration;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                dirFireX = 0f;
+                dirFireY = mass * -1 * acceleration;
+            }
+
         }
         if(InShop == true)
         {

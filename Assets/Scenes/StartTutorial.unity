@@ -415,7 +415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18497454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.948532, y: 63.705597, z: -0.5220629}
+  m_LocalPosition: {x: -63.948532, y: 61.91, z: -0.5220629}
   m_LocalScale: {x: 0.5220629, y: 0.5220629, z: 0.5220629}
   m_Children:
   - {fileID: 1163827089}
@@ -7614,7 +7614,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.37034264}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7625,7 +7625,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.25931472}
   m_EdgeRadius: 0
 --- !u!114 &292429240
 MonoBehaviour:
@@ -10089,7 +10089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389733281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.56, y: 12.24, z: 0}
+  m_LocalPosition: {x: -37.56, y: 11.19, z: 0}
   m_LocalScale: {x: 7.3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1148821703}
@@ -20008,7 +20008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887998834}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.17, y: 43.53, z: -1}
+  m_LocalPosition: {x: -57.17, y: 41.98, z: -1}
   m_LocalScale: {x: 1.5436486, y: 1.5436486, z: 1.5436486}
   m_Children:
   - {fileID: 158269194}
@@ -25238,7 +25238,6 @@ MonoBehaviour:
   _CameraMain: {fileID: 122372652}
   _ExitMagicShop: {fileID: 988902422}
   _Spin: {fileID: 530698964}
-  _Spin02: {fileID: 0}
   _MagicShop02: {fileID: 162093483}
   _BGMMainMap: {fileID: 1501995784}
   popupPlaceSFX: {fileID: 245165084}
@@ -26194,7 +26193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148821702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2020040624}
