@@ -29,83 +29,87 @@ public class TutorialGuide : MonoBehaviour
     bool isDoCount = false;
     bool isDosleep = false ;
 
+    //ColiderBlock
+    public GameObject[] BlockPath; 
+
     
     void Update()
     {
         if (isStart == true)
         {
             TutorialText.SetActive(true);
-            desGuide.text = "เดินไปที่ปะดิทิน แล้วกด 'Spacebar'";
+            desGuide.text = "Walk to the calendar, then press 'Spacebar'.";
         }
         if (isEvent == true)
         {
-            desGuide.text = "ไปคุยกับแม่ เดินไปหาแม่แล้วกด 'Spacebar'";
+            desGuide.text = "Go talk to your mom, walk to her and press 'Spacebar'.";
+            Destroy(BlockPath[0]);
         }
         if (isLogmom == true)
         {
-            desGuide.text = "กดปุ่ม 'Quest' เพื่อรับรับเควส";
+            desGuide.text = "Click the 'Quest' button to accept the quest.";
         }
         if (isQuest == true)
         {
-            desGuide.text = "รับเควส 'Brush your teeth' ";
+            desGuide.text = "Accept 'Brush your teeth'.";
         }
         if (isQuestAccept == true )
         {
             guideClick.SetActive(true);
-            desGuide.text = "กดปุ่ม 'Check Quest' เพื่อดูรายละเอียดเควส ";
+            desGuide.text = "Click 'Check Quest' to look at the quest description.";
         }
         if (isQuestBrush == true)
         {
             guideClick.SetActive(false);
-            desGuide.text = "ทำเควส 'Brush your teeth' ให้สำเร็จ ";
+            desGuide.text = "Finish 'Brush your teeth' quest.";
+            Destroy(BlockPath[1]);
         }
         if (isQuestRub == true)
         {
             jokeButton[1].SetActive(false);
-            desGuide.text = "ไปรับเควส 'Mob The Floor' และทำให้สำเร็จ";
+            desGuide.text = "Accept and finish 'Mop the floor' quest.";
+            Destroy(BlockPath[2]);
         }
         if (isQuestBuy == true)
         {
             jokeButton[0].SetActive(false);
-            desGuide.text = "ไปรับเควส 'Shopping at the market' และทำให้สำเร็จ";
+            desGuide.text = "Accept and finish 'Shopping at the market' quest.";
+            Destroy(BlockPath[3]);
         }
         if (isQuestBuyCom == true && isDoCount == false)
         {
             countText.SetActive(true);
             
-            desGuide.text = "ไปเบเกอรี่ เพื่อซื้อเค้กเพื่อให้ค่าความสุขเพิ่ม";
+            desGuide.text = "Go to the bakery to buy sweets to increase Happiness.";
             isDoCount = true;
         }
         if(isQuestBuyCom == true)
         {
-           
-            desGuide.text = "ไปเบเกอรี่ เพื่อซื้อเค้กเพื่อให้ค่าความสุขเพิ่ม";
-            
+            desGuide.text = "Go to the bakery to buy sweets to increase Happiness.";
+            Destroy(BlockPath[4]);
         }
         if (isGoBakery == true)
         {
-            desGuide.text = "เมื่อค่าความสุข เพิ่มแล้ว ให้ไปร้าน magic shop เพื่อหมุนวงล้อ";
+            desGuide.text = "When Happiness increases, go to the Magic shop to spin the wheel.";
+            Destroy(BlockPath[5]);
         }
         if (isGoMagic == true)
         {
-            desGuide.text = "แย่แล้วเวลาจะหมดแล้ว ให้รีบกับไปเข้านอน ถ้าไม่ทันค่าความสุขจะลด";
+            desGuide.text = "Oh no! Time’s up! I have to go to bed, otherwise my Happiness will decrease.";
             if (isDosleep == false)
             {
                 DayDay.TimeTutorial();
                 isDosleep = true;
             }
-            
         }
         if (isEndTu == true)
         {
             endTextTu.SetActive(true);
         }
-
     }
 
     public void QuitAlert()
     {
-        
         countText.SetActive(false);
     }
     public void GotoGame()
