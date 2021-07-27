@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cake1 : MonoBehaviour
+public class CakeTu : MonoBehaviour
 {
     public int HappyValue;
     public int CakePrice;
     public GameObject _Cake;
+    public GameObject Bakery;
+    public GameObject HappyTownMap;
+    public GameObject CameraFollowPlayer;
+    public GameObject CameraMain;
+    public GameObject ExitBakery;
     public AudioSource buttonSFX;
     public AudioSource MoneySFX;
     public AudioSource WrongSFX;
@@ -16,24 +21,27 @@ public class Cake1 : MonoBehaviour
         _Cake.SetActive(true);
         if (Input.GetMouseButtonDown(0))
         {
-            
+
             if (Player.HappyValue < Player.maxHappyValue)
             {
-                
+
                 if (Player.money >= CakePrice)
                 {
+                    TutorialGuide.isGoBakery = true;
                     MoneySFX.Play();
                     Player.HappyValue += HappyValue;
                     Player.money -= CakePrice;
                     Debug.Log(HappyValue);
                     if (Player.HappyValue > Player.maxHappyValue)
                     {
-                        Player.HappyValue = 12;   
+                        Player.HappyValue = 12;
                     }
-                }
-                else
-                {
-                    WrongSFX.Play();
+                    Bakery.SetActive(false);
+                    HappyTownMap.SetActive(true);
+                    CameraFollowPlayer.SetActive(true);
+                    CameraMain.SetActive(false);
+                    ExitBakery.SetActive(false);
+                    PlayerController2D.InShop = false;
                 }
 
             }
