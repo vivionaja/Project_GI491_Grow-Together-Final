@@ -59,6 +59,7 @@ public class DayDay : MonoBehaviour
     public GameObject BGMHome;
 
     public GameObject _Tutorial;
+
  
 
     // Start is called before the first frame update

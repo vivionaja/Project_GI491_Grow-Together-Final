@@ -11,6 +11,7 @@ public class BakeryEnter : MonoBehaviour
     public GameObject _CameraMain;
     public GameObject _ExitBakery;
     public GameObject _Bakery02;
+    public GameObject _BGMMainMap;
 
     bool CheckTrigger = false;
 
@@ -24,9 +25,10 @@ public class BakeryEnter : MonoBehaviour
             Debug.Log("Push");
             _CameraFollowPlayer.SetActive(false);
             _CameraMain.SetActive(true);
-            _HappyTownMap.SetActive(false);
+            //_HappyTownMap.SetActive(false);
             _Bakery.SetActive(true);
             _ExitBakery.SetActive(true);
+            _BGMMainMap.SetActive(false);
             CheckTrigger = false;
             PlayerController2D.InShop = true;
         }
@@ -53,11 +55,12 @@ public class BakeryEnter : MonoBehaviour
 
     public void ExitBakery()
     {
-        _HappyTownMap.SetActive(true);
+        //_HappyTownMap.SetActive(true);
         _CameraFollowPlayer.SetActive(true);
         _CameraMain.SetActive(false);
         _Bakery.SetActive(false);
         _ExitBakery.SetActive(false);
+        _BGMMainMap.SetActive(true);
 
         PlayerController2D.InShop = false;
     }

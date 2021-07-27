@@ -12,6 +12,7 @@ public class MagicShopEnter : MonoBehaviour
     public GameObject _ExitMagicShop;
     public GameObject _Spin;
     public GameObject _MagicShop02;
+    public GameObject _BGMMainMap;
 
     bool CheckTrigger = false;
 
@@ -31,10 +32,11 @@ public class MagicShopEnter : MonoBehaviour
             Debug.Log("Push");
             _CameraFollowPlayer.SetActive(false);
             _CameraMain.SetActive(true);
-            _HappyTownMap.SetActive(false);
+            //_HappyTownMap.SetActive(false);
             _MagicShop.SetActive(true);
             _ExitMagicShop.SetActive(true);
             _Spin.SetActive(true);
+            _BGMMainMap.SetActive(false);
             CheckTrigger = false;
             PlayerController2D.InShop = true;
         }
@@ -62,10 +64,11 @@ public class MagicShopEnter : MonoBehaviour
     {
         _CameraFollowPlayer.SetActive(true);
         _CameraMain.SetActive(false);
-        _HappyTownMap.SetActive(true);
+        //_HappyTownMap.SetActive(true);
         _MagicShop.SetActive(false);
         _ExitMagicShop.SetActive(false);
         _Spin.SetActive(false);
+        _BGMMainMap.SetActive(true);
         PlayerController2D.InShop = false;
     }
 }

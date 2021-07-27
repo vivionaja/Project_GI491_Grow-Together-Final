@@ -15,6 +15,7 @@ public class MarketEnter : MonoBehaviour
     public GameObject _Market01;
     public GameObject _Market02;
     public GameObject _MarketEnter02;
+    public GameObject _BGMMainMap;
 
 
     bool CheckTrigger = false;
@@ -30,10 +31,11 @@ public class MarketEnter : MonoBehaviour
             _CameraFollowPlayer.SetActive(false);
             _CameraMain.SetActive(true);
             _Market01.SetActive(true);
-            _HappyTownMap.SetActive(false);
+            //_HappyTownMap.SetActive(false);
             _Market.SetActive(true);
             _RightButton.SetActive(true);
             _ExitMarket.SetActive(true);
+            _BGMMainMap.SetActive(false);
             CheckTrigger = false;
             PlayerController2D.InShop = true;
         }
@@ -74,7 +76,7 @@ public class MarketEnter : MonoBehaviour
 
     public void ExitMarket()
     {
-        _HappyTownMap.SetActive(true);
+        //_HappyTownMap.SetActive(true);
         _CameraFollowPlayer.SetActive(true);
         _CameraMain.SetActive(false);
         _Market.SetActive(false);
@@ -82,6 +84,7 @@ public class MarketEnter : MonoBehaviour
         _LeftButton.SetActive(false);
         _RightButton.SetActive(false);
         _Market02.SetActive(false);
+        _BGMMainMap.SetActive(true);
 
         PlayerController2D.InShop = false;
     }

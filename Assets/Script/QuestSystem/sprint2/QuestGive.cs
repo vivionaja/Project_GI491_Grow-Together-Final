@@ -33,6 +33,7 @@ public class QuestGive : MonoBehaviour
     public GameObject popUpWash;
     public Quest quest2;
     public GameObject[] popUpWater;
+    public GameObject[] PlantsColider;
     public Quest quest3;
     public GameObject popUpBrush;
     public Quest quest4;
@@ -132,45 +133,45 @@ public class QuestGive : MonoBehaviour
         {
             popUpHelp.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            CountQuest1 += 10;
-            if (CountQuest1 == 10 && WaterPlantsAchievementsCompleteCopper == false)
-            {
-                unlockAchieveSFX.Play();
-                Debug.Log("Copper");
-                Player.money += 100;
-                popUpAchievements.SetActive(true);
-                popUpWaterPlantsAchievementsCopper.SetActive(true);
-                WaterPlantsAchievementsCollecCopper.SetActive(true);
-                WaterPlantsAchievementsCompleteCopper = true;
-                StartCoroutine(ExitpopUpAchievements());
-            }
-            if (CountQuest1 == 50 && WaterPlantsAchievementsCompleteSilver == false)
-            {
-                unlockAchieveSFX.Play();
-                Debug.Log("Silver");
-                Player.money += 200;
-                popUpAchievements.SetActive(true);
-                popUpWaterPlantsAchievementsSilver.SetActive(true);
-                WaterPlantsAchievementsCollecCopper.SetActive(false);
-                WaterPlantsAchievementsCollecSilver.SetActive(true);
-                WaterPlantsAchievementsCompleteSilver = true;
-                StartCoroutine(ExitpopUpAchievements());
-            }
-            if (CountQuest1 == 100 && WaterPlantsAchievementsCompleteGold == false)
-            {
-                unlockAchieveSFX.Play();
-                Debug.Log("Gold");
-                Player.money += 300;
-                popUpAchievements.SetActive(true);
-                popUpWaterPlantsAchievementsGold.SetActive(true);
-                WaterPlantsAchievementsCollecSilver.SetActive(false);
-                WaterPlantsAchievementsCollecGold.SetActive(true);
-                WaterPlantsAchievementsCompleteGold = true;
-                StartCoroutine(ExitpopUpAchievements());
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    CountQuest1 += 10;
+        //    if (CountQuest1 == 10 && WaterPlantsAchievementsCompleteCopper == false)
+        //    {
+        //        unlockAchieveSFX.Play();
+        //        Debug.Log("Copper");
+        //        Player.money += 100;
+        //        popUpAchievements.SetActive(true);
+        //        popUpWaterPlantsAchievementsCopper.SetActive(true);
+        //        WaterPlantsAchievementsCollecCopper.SetActive(true);
+        //        WaterPlantsAchievementsCompleteCopper = true;
+        //        StartCoroutine(ExitpopUpAchievements());
+        //    }
+        //    if (CountQuest1 == 50 && WaterPlantsAchievementsCompleteSilver == false)
+        //    {
+        //        unlockAchieveSFX.Play();
+        //        Debug.Log("Silver");
+        //        Player.money += 200;
+        //        popUpAchievements.SetActive(true);
+        //        popUpWaterPlantsAchievementsSilver.SetActive(true);
+        //        WaterPlantsAchievementsCollecCopper.SetActive(false);
+        //        WaterPlantsAchievementsCollecSilver.SetActive(true);
+        //        WaterPlantsAchievementsCompleteSilver = true;
+        //        StartCoroutine(ExitpopUpAchievements());
+        //    }
+        //    if (CountQuest1 == 100 && WaterPlantsAchievementsCompleteGold == false)
+        //    {
+        //        unlockAchieveSFX.Play();
+        //        Debug.Log("Gold");
+        //        Player.money += 300;
+        //        popUpAchievements.SetActive(true);
+        //        popUpWaterPlantsAchievementsGold.SetActive(true);
+        //        WaterPlantsAchievementsCollecSilver.SetActive(false);
+        //        WaterPlantsAchievementsCollecGold.SetActive(true);
+        //        WaterPlantsAchievementsCompleteGold = true;
+        //        StartCoroutine(ExitpopUpAchievements());
+        //    }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -295,6 +296,8 @@ public class QuestGive : MonoBehaviour
         buttonAccept[1].SetActive(false);
         popUpWater[0].SetActive(true);
         popUpWater[1].SetActive(true);
+        PlantsColider[0].SetActive(true);
+        PlantsColider[1].SetActive(true);
         questWindowtxt.SetActive(true);
         descritWindowtxt.SetActive(true);
         titleText.text = quest2.title;

@@ -42,7 +42,8 @@ public class Player : MonoBehaviour
 
     CheakAray cheak;
     public GameObject popUpWash;   
-    public GameObject[] popUpWater;   
+    public GameObject[] popUpWater;
+    public GameObject[] PlantsColider;
     public GameObject popUpBrush;    
     public GameObject popUpBath;   
     public GameObject[] popUpBuy;    
@@ -332,10 +333,12 @@ public class Player : MonoBehaviour
             if (cheakQ2 == true && number == 1)
             {
                 popUpWater[0].SetActive(false);
+                PlantsColider[0].SetActive(false);
             }
             else if (cheakQ2 == true && number == 2)
             {
                 popUpWater[1].SetActive(false);
+                PlantsColider[1].SetActive(false);
             }
             if (quest.goal.IsReached())
             {

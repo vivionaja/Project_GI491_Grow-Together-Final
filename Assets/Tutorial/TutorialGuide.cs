@@ -35,6 +35,10 @@ public class TutorialGuide : MonoBehaviour
     
     void Update()
     {
+        if (isEndTu == true)
+        {
+            endTextTu.SetActive(true);
+        }
         if (isStart == true)
         {
             TutorialText.SetActive(true);
@@ -95,17 +99,15 @@ public class TutorialGuide : MonoBehaviour
         }
         if (isGoMagic == true)
         {
+            StartCoroutine(Delay());
             desGuide.text = "Oh no! Time’s up! I have to go to bed, otherwise my Happiness will decrease.";
             if (isDosleep == false)
             {
                 isDosleep = true;
             }
+            
         }
-        if (isEndTu == true)
-        {
-            TutorialText.SetActive(false);
-            endTextTu.SetActive(true);
-        }
+       
     }
 
     public void QuitAlert()
@@ -115,5 +117,11 @@ public class TutorialGuide : MonoBehaviour
     public void GotoGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(4.0f);
+        Destroy(TutorialText);
     }
 }
