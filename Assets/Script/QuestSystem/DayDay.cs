@@ -185,6 +185,7 @@ public class DayDay : MonoBehaviour
         }
         else
         {
+            LootSystem.SpinPrice = 20;
             desEvent.text = "";
             SpecialDeal[0].SetActive(false);
             SpecialDeal[1].SetActive(false);
