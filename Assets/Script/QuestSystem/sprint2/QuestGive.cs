@@ -133,45 +133,45 @@ public class QuestGive : MonoBehaviour
         {
             popUpHelp.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            CountQuest1 += 10;
-            if (CountQuest1 == 10 && WaterPlantsAchievementsCompleteCopper == false)
-            {
-                unlockAchieveSFX.Play();
-                Debug.Log("Copper");
-                Player.money += 100;
-                popUpAchievements.SetActive(true);
-                popUpWaterPlantsAchievementsCopper.SetActive(true);
-                WaterPlantsAchievementsCollecCopper.SetActive(true);
-                WaterPlantsAchievementsCompleteCopper = true;
-                StartCoroutine(ExitpopUpAchievements());
-            }
-            if (CountQuest1 == 50 && WaterPlantsAchievementsCompleteSilver == false)
-            {
-                unlockAchieveSFX.Play();
-                Debug.Log("Silver");
-                Player.money += 200;
-                popUpAchievements.SetActive(true);
-                popUpWaterPlantsAchievementsSilver.SetActive(true);
-                WaterPlantsAchievementsCollecCopper.SetActive(false);
-                WaterPlantsAchievementsCollecSilver.SetActive(true);
-                WaterPlantsAchievementsCompleteSilver = true;
-                StartCoroutine(ExitpopUpAchievements());
-            }
-            if (CountQuest1 == 100 && WaterPlantsAchievementsCompleteGold == false)
-            {
-                unlockAchieveSFX.Play();
-                Debug.Log("Gold");
-                Player.money += 300;
-                popUpAchievements.SetActive(true);
-                popUpWaterPlantsAchievementsGold.SetActive(true);
-                WaterPlantsAchievementsCollecSilver.SetActive(false);
-                WaterPlantsAchievementsCollecGold.SetActive(true);
-                WaterPlantsAchievementsCompleteGold = true;
-                StartCoroutine(ExitpopUpAchievements());
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    CountQuest1 += 10;
+        //    if (CountQuest1 == 10 && WaterPlantsAchievementsCompleteCopper == false)
+        //    {
+        //        unlockAchieveSFX.Play();
+        //        Debug.Log("Copper");
+        //        Player.money += 100;
+        //        popUpAchievements.SetActive(true);
+        //        popUpWaterPlantsAchievementsCopper.SetActive(true);
+        //        WaterPlantsAchievementsCollecCopper.SetActive(true);
+        //        WaterPlantsAchievementsCompleteCopper = true;
+        //        StartCoroutine(ExitpopUpAchievements());
+        //    }
+        //    if (CountQuest1 == 50 && WaterPlantsAchievementsCompleteSilver == false)
+        //    {
+        //        unlockAchieveSFX.Play();
+        //        Debug.Log("Silver");
+        //        Player.money += 200;
+        //        popUpAchievements.SetActive(true);
+        //        popUpWaterPlantsAchievementsSilver.SetActive(true);
+        //        WaterPlantsAchievementsCollecCopper.SetActive(false);
+        //        WaterPlantsAchievementsCollecSilver.SetActive(true);
+        //        WaterPlantsAchievementsCompleteSilver = true;
+        //        StartCoroutine(ExitpopUpAchievements());
+        //    }
+        //    if (CountQuest1 == 100 && WaterPlantsAchievementsCompleteGold == false)
+        //    {
+        //        unlockAchieveSFX.Play();
+        //        Debug.Log("Gold");
+        //        Player.money += 300;
+        //        popUpAchievements.SetActive(true);
+        //        popUpWaterPlantsAchievementsGold.SetActive(true);
+        //        WaterPlantsAchievementsCollecSilver.SetActive(false);
+        //        WaterPlantsAchievementsCollecGold.SetActive(true);
+        //        WaterPlantsAchievementsCompleteGold = true;
+        //        StartCoroutine(ExitpopUpAchievements());
+        //    }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other)
